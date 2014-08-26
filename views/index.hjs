@@ -7,6 +7,21 @@
 	<link rel='stylesheet' href='/stylesheets/bootstrap-theme.min.css' />
 	<script src="/js/jquery-2.1.1.min.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
+
+	<!-- angular and material design stuff-->
+	<script src="/angular/lib/angular.min.js"></script>
+	<script src="/angular/lib/angular-animate.min.js"></script>
+	<link rel="stylesheet" href="angular/angular-material/material-design.css" />
+	<script src="angular/angular-material/angular-animate-sequence.js"></script>
+	<script src="angular/angular-material/angular-animate-stylers.js"></script>
+	<script src="angular/angular-material/material-design.js"></script>
+
+	<!-- include angular stuffs-->	
+	<script src="/angular/scripts/app.js"></script>
+	<script src="/angular/scripts/MainMenu/MainMenu.js"></script>
+	<script src="/angular/scripts/MainMenu/directives/MainMenuDirective.js"></script>
+	<script src="/angular/scripts/MainMenu/controllers/MainMenuController.js"></script>
+
   </head>
   <body>
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -30,9 +45,10 @@
 	      </div>
 	    </div>
 
-	    <div class="container">
-	      <div class="starter-template">
-	        <h1><pre>Sh( .)( .)tmoko?</pre></h1>
+	    <div class="container" ng-app="mainModule">
+	      <div class="starter-template" ng-controller="mainMenuController">
+	        <h1><pre>Sh( .)( .)tmoko?<div main-menu-directive ></div></pre></h1>
+
 	      </div>
 	    </div>
   </body>
