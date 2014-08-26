@@ -1,1 +1,5 @@
-ReadMe 08/26/2014
+to run:
+npm install
+node bin/www
+
+enjoy! :)
