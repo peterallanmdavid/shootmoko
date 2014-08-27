@@ -51,5 +51,13 @@
 
 	      </div>
 	    </div>
+		<script type="text/javascript" charset="utf-8">
+		$(function() {
+		    var bgArray = ['bg1.jpg', 'bg2.jpg', 'bg3.jpg', 'bg4.jpg', 'bg5.jpg'];
+		    var bg = bgArray[Math.floor(Math.random() * bgArray.length)];
+		    var path = '/images/';
+		    $('body').css('background-image', 'url(' + path+bg + ')');
+		}); 
+		</script>
   </body>
 </html>
