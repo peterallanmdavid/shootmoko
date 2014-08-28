@@ -7,7 +7,9 @@ router.get('/register', function(req, res) {
   res.send({msg: 'register get'});
 });
 
-router.post('/register', function(req, res) {	
+
+//format {"username":"test","password":"test2"}
+router.post('/register', function(req, res) {
 	Account.register(new Account({ username : req.body.username }), req.body.password, function(err, account) {
         if (err) {
         	console.log(err);
@@ -16,13 +18,19 @@ router.post('/register', function(req, res) {
         	console.log("success");
         	res.send({msg: "register success"});
         }
-        
     });
-  	res.send({msg: 'register post'});
 });
 
 router.get('/login', function(req, res) {
   res.send({msg: 'login'});
+});
+
+
+router.get('/listallusers', function(req, res) {
+	Account.find(function(err,accounts){
+		if(err) res.send(err);
+		res.json(accounts);
+	});
 });
 
 module.exports = router;
