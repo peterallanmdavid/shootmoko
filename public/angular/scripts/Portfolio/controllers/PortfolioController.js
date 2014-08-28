@@ -23,7 +23,7 @@ portfolioModule.controller('portfolioController',['$scope', function($scope) {
         face : '/images/portfolio_list/james.jpg',
         name: 'James Lopena',
         alias: 'LoverBoy',
-        tagline: "Wag kang pipikit, kung ayaw mong kong lumapit"
+        tagline: "Wag kang pipikit, kung ayaw mong kong lumapit :)"
       },
     ]
  }]);
