@@ -1,4 +1,7 @@
 to run:
+
+install & run mongodb
+
 >npm install
 >node bin/www
 
