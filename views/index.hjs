@@ -47,8 +47,7 @@
 
 	    <div class="container" ng-app="mainModule">
 	      <div class="starter-template" ng-controller="mainMenuController">
-	        <h1><pre>Sh( .)( .)tmoko?<div main-menu-directive ></div></pre></h1>
-
+	        <div main-menu-directive ></div>
 	      </div>
 	    </div>
 		<script type="text/javascript" charset="utf-8">

@@ -8,4 +8,7 @@ mainMenuModule.controller('mainMenuController',['$scope', function($scope) {
     $scope.activeIndex = 0;
     $scope.tabs = [].concat(tabs);
 
+    $scope.showProfile = false;
+    $scope.showportfolio = false;
+
  }]);
