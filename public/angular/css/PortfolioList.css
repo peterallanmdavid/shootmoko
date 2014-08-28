@@ -1,0 +1,18 @@
+.logo {
+    padding: 10px;
+    height: 36px;
+    width: 100%;
+}
+
+.centered {
+    margin-top: -5px;
+    padding-left: 48%
+}
+
+
+.face {
+border-radius: 30px;
+border: 1px solid #DDD;
+width: 48px;
+margin: 16px;
+}

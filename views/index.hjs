@@ -16,6 +16,8 @@
 	<script src="angular/angular-material/angular-animate-stylers.js"></script>
 	<script src="angular/angular-material/material-design.js"></script>
 
+	<link rel="stylesheet" href="angular/css/PortfolioList.css" />
+
 	<!-- include angular stuffs-->	
 	<script src="/angular/scripts/app.js"></script>
 	<script src="/angular/scripts/MainMenu/MainMenu.js"></script>
