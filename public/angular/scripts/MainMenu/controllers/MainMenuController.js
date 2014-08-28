@@ -22,41 +22,4 @@ mainMenuModule.controller('mainMenuController',['$scope', function($scope) {
     	}
     	
     }
-
-
-
-    $scope.todos = [
-      {
-        face : '/images/portfolio_list/peter.jpg',
-        what: 'Brunch this weekend?',
-        who: 'Min Li Chan',
-        when: '3:08PM',
-        notes: " I'll be in your neighborhood doing errands"
-      },
-      {
-        face : '/images/portfolio_list/emerson.jpg',
-        what: 'Brunch this weekend?',
-        who: 'Min Li Chan',
-        when: '3:08PM',
-        notes: " I'll be in your neighborhood doing errands"
-      },
-      {
-        face : '/images/portfolio_list/frietz.jpg',
-        what: 'Brunch this weekend?',
-        who: 'Min Li Chan',
-        when: '3:08PM',
-        notes: " I'll be in your neighborhood doing errands"
-      },
-      {
-        face : '/images/portfolio_list/james.jpg',
-        what: 'Brunch this weekend?',
-        who: 'Min Li Chan',
-        when: '3:08PM',
-        notes: " I'll be in your neighborhood doing errands"
-      },
-    ]
-
-
-
-
  }]);

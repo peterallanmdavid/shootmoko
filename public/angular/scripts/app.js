@@ -1,3 +1,3 @@
-var mainModule= angular.module('mainModule',['mainMenuModule']);
+var mainModule= angular.module('mainModule',['mainMenuModule','profileModule','portfolioModule']);
 
 

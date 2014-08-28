@@ -24,6 +24,17 @@
 	<script src="/angular/scripts/MainMenu/directives/MainMenuDirective.js"></script>
 	<script src="/angular/scripts/MainMenu/controllers/MainMenuController.js"></script>
 
+	<!--include module for Profile Container-->
+	<script src="/angular/scripts/Profile/ProfileModule.js"></script>
+	<script src="/angular/scripts/Profile/directives/ProfileContainerDirective.js"></script>
+	<script src="/angular/scripts/Profile/controllers/ProfileController.js"></script>
+
+	<!--include module for Portfolio Container-->
+	<script src="/angular/scripts/Portfolio/PortfolioModule.js"></script>
+	<script src="/angular/scripts/Portfolio/directives/PortfolioContainerDirective.js"></script>
+	<script src="/angular/scripts/Portfolio/controllers/Portfoliocontroller.js"></script>
+
+
   </head>
   <body>
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">

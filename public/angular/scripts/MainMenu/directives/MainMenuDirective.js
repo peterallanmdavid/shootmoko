@@ -7,30 +7,12 @@ mainMenuModule.directive('mainMenuDirective', function() {
             '</material-tab>'+
         '</material-tabs>'+
 
-        '<div class = "profile-container" ng-show = "showProfile">'+
-          '<material-card>'+
-            '<img src="/images/profile.jpg" class="material-card-image">'+
-            '<h2>MyProfile</h2>'+
-             '<p>TodoProfile Here churva ek ek, sample lang to para may laman ang profile container</p>'+
-          '</material-card>'+
-
+        '<div class = "profile-container" ng-show = "showProfile" ng-controller = "profileController">'+
+          '<div profile-container></div>'+
         '</div>'+
 
-        '<div class = "portfolio-container" ng-show ="showPortfolio">'+
-        '<material-list>'+
-          '<material-item ng-repeat="item in todos">'+
-            '<div class="material-tile-left">'+
-                '<img ng-src="{{item.face}}" class="face">'+
-            '</div>'+
-            '<div class="material-tile-content">'+
-              '<h2>{{item.what}}</h2>'+
-              '<h3>{{item.who}}</h3>'+
-              '<p>'+
-                '{{item.notes}}'+
-              '</p>'+
-            '</div>'+
-          '</material-item>'+
-        '</material-list>'+
+        '<div class = "portfolio-container" ng-show ="showPortfolio" ng-controller = "portfolioController">'+
+          '<div portfolio-container></div>'+
         '</div>'
     };
   });
