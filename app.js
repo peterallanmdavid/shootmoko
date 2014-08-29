@@ -21,7 +21,7 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hjs');
 //jwt setup
-//app.set('jwtTokenSecret', 'MUTHAFUCKAs_!!!aSaneSs!!');
+app.set('jwtTokenSecret', 'MUTHAFUCKAs_!!!aSaneSs!!');
 
 app.use(favicon());
 app.use(logger('dev'));

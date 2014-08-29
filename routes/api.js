@@ -3,7 +3,11 @@ var router = express.Router();
 var passport = require('passport');
 var Account = require('../models/account');
 var jwt = require('jwt-simple');
-var tokenSecret ="test123test124";
+var moment = require('moment');
+var expires = moment().add('days', 7).valueOf();
+var tokenSecret ='taretasrgadrgaerg';
+
+
 router.get('/register', function(req, res) {
   res.send({msg: 'register get'});
 });
@@ -31,8 +35,17 @@ router.post('/login', function(req, res, next) {
     }
 
     //user has authenticated correctly thus we create a JWT token 
-    var token = jwt.encode({ username: req.body.username }, tokenSecret);
-    res.json({ token : token });
+    var token = jwt.encode(
+    {
+    	iss: user.username, 
+    	username: user.username,
+    	exp: expires
+    }, tokenSecret);
+    res.json({ 
+    	token : token,
+    	expires: expires,
+    	user: user.toJSON()
+    });
 
   })(req, res, next);  
 });
@@ -43,6 +56,27 @@ router.get('/listallusers', function(req, res) {
 		if(err) res.send(err);
 		res.json(accounts);
 	});
+});
+
+//add token to url or header first
+//@todo	move to middleware
+router.get('/somerestrictedshit', function(req, res, next){
+	var token = (req.body && req.body.access_token) || (req.query && req.query.access_token) || req.headers['x-access-token'];
+	if (token) {
+		try {
+	    	var decoded = jwt.decode(token, tokenSecret); 
+	    	if (decoded.exp <= Date.now()) {
+  				res.end('Access token has expired', 400);
+			}
+			res.json({msg: 'has access'});
+	    	// handle token here 
+	  	} catch (err) {
+	    	return next();
+	  	}
+	} else {
+  		res.json({msg: 'no token'});
+	}
+
 });
 
 module.exports = router;
