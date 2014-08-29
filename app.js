@@ -9,6 +9,7 @@ var session = require('express-session');
 var mongoose = require('mongoose');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
+//var jwt = require('jwt-simple');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -19,6 +20,8 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hjs');
+//jwt setup
+//app.set('jwtTokenSecret', 'MUTHAFUCKAs_!!!aSaneSs!!');
 
 app.use(favicon());
 app.use(logger('dev'));

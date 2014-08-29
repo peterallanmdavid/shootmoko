@@ -2,7 +2,8 @@ var express = require('express');
 var router = express.Router();
 var passport = require('passport');
 var Account = require('../models/account');
-
+var jwt = require('jwt-simple');
+var tokenSecret ="test123test124";
 router.get('/register', function(req, res) {
   res.send({msg: 'register get'});
 });
@@ -21,8 +22,19 @@ router.post('/register', function(req, res) {
     });
 });
 
-router.get('/login', function(req, res) {
-  res.send({msg: 'login'});
+//format {"username":"test","password":"test2"}
+router.post('/login', function(req, res, next) {
+	passport.authenticate('local', function(err, user, info) {
+    if (err) { return next(err); }
+    if (!user) {
+      return res.json(401, { error: 'login error' });
+    }
+
+    //user has authenticated correctly thus we create a JWT token 
+    var token = jwt.encode({ username: req.body.username }, tokenSecret);
+    res.json({ token : token });
+
+  })(req, res, next);  
 });
 
 
