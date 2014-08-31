@@ -1,7 +1,8 @@
 mainModule.config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/',
       {
-        templateUrl: "/angular/scripts/main-view.html",
+        //templateUrl: "/angular/scripts/main-view.html",
+		templateUrl: "/angular/views/home.html",
         controller: "AppCtrl"
       }
     )
@@ -26,6 +27,21 @@ mainModule.config(['$routeProvider', function($routeProvider) {
         controller: "AppCtrl"
       }
     )
+
+    $routeProvider.when('/photographerhome',
+      {
+		templateUrl: "/angular/views/photographer.html",
+        controller: "AppCtrl"
+      }
+    );
+
+    $routeProvider.when('/clienthome',
+      {
+		templateUrl: "/angular/views/lookingforphotographer.html",
+        controller: "AppCtrl"
+      }
+    );
+
 }])
 
 mainModule.controller("AppCtrl", function($scope) {
