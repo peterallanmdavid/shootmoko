@@ -11,6 +11,7 @@
 	<!-- angular and material design stuff-->
 	<script src="/angular/lib/angular.min.js"></script>
 	<script src="/angular/lib/angular-animate.min.js"></script>
+	<script src="/angular/lib/angular-route.min.js"></script>
 	<link rel="stylesheet" href="angular/angular-material/material-design.css" />
 	<script src="angular/angular-material/angular-animate-sequence.js"></script>
 	<script src="angular/angular-material/angular-animate-stylers.js"></script>
@@ -20,6 +21,7 @@
 
 	<!-- include angular stuffs-->	
 	<script src="/angular/scripts/app.js"></script>
+	<script src="/angular/scripts/app-routes.js"></script>
 	<script src="/angular/scripts/MainMenu/MainMenu.js"></script>
 	<script src="/angular/scripts/MainMenu/directives/MainMenuDirective.js"></script>
 	<script src="/angular/scripts/MainMenu/controllers/MainMenuController.js"></script>
@@ -41,7 +43,7 @@
 
 	    <div class="container" ng-app="mainModule">
 	      <div class="starter-template" ng-controller="mainMenuController">
-	        <div main-menu-directive ></div>
+	      		<div ng-view><div>
 	      </div>
 	    </div>
 		<script type="text/javascript" charset="utf-8">

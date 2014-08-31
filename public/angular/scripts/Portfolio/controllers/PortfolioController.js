@@ -2,7 +2,7 @@ portfolioModule.controller('portfolioController',['$scope', function($scope) {
 	
 	   $scope.todos = [
       {
-        face : '/images/portfolio_list/peter.jpg',
+        face : '/images/portfolio_list/pete.jpg',
         name: 'Peter Allan David',
         alias: 'PeteBull',
         tagline: "Wag kang titingin, mahuhumaling ka sa akin"
