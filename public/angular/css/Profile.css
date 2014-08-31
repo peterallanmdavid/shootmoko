@@ -1,0 +1,7 @@
+  material-card .material-card-image-profile {
+
+    width: -webkit-calc(100% + 10px*2);
+    width: calc(50% + 10px*2);
+    margin-left: -10px;
+    margin-top: -10px;
+    border-radius: 2px 2px 0 0; }
