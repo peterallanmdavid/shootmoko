@@ -13,9 +13,13 @@ router.get('/register', function(req, res) {
 });
 
 
-//format {"username":"test","password":"test2"}
+//format {"username":"test","password":"test2", "usertype": "photographer"}
 router.post('/register', function(req, res) {
-	Account.register(new Account({ username : req.body.username }), req.body.password, function(err, account) {
+	Account.register(new Account({ 
+			username : req.body.username, 
+			role: "user",
+			usertype: req.body.usertype
+		}), req.body.password, function(err, account) {
         if (err) {
         	console.log(err);
             res.send({msg: err});
@@ -53,6 +57,20 @@ router.post('/login', function(req, res, next) {
 
 router.get('/listallusers', function(req, res) {
 	Account.find(function(err,accounts){
+		if(err) res.send(err);
+		res.json(accounts);
+	});
+});
+
+router.get('/listallphotographers', function(req, res) {
+	Account.find({usertype: "photographer"},function(err,accounts){
+		if(err) res.send(err);
+		res.json(accounts);
+	});
+});
+
+router.get('/listallclients', function(req, res) {
+	Account.find({usertype: "client"}, function(err,accounts){
 		if(err) res.send(err);
 		res.json(accounts);
 	});
