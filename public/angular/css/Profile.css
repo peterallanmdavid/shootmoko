@@ -1,7 +1,28 @@
-  material-card .material-card-image-profile {
 
-    width: -webkit-calc(100% + 10px*2);
-    width: calc(50% + 10px*2);
-    margin-left: -10px;
-    margin-top: -10px;
-    border-radius: 2px 2px 0 0; }
+.profile-option-container{
+	padding: 0px;
+	padding-top: 10px;
+
+
+}
+
+.profile-content-container{
+	padding: 0px;
+	padding-top: 10px;
+}
+
+.profile-option{
+	padding:0px;
+	margin: 5px;
+	background-color: white;
+
+}
+.profile-content{
+	padding:0px;
+	margin: 5px;
+	min-height: 480px;
+}
+.material-card-image-profile{
+	width: 76%;
+	height: 80%;
+}

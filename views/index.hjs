@@ -18,6 +18,7 @@
 	<script src="angular/angular-material/material-design.js"></script>
 
 	<link rel="stylesheet" href="angular/css/PortfolioList.css" />
+	<link rel="stylesheet" href="angular/css/Profile.css" />
 
 	<!-- include angular stuffs-->	
 	<script src="/angular/scripts/app.js"></script>
