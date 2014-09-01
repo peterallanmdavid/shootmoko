@@ -25,7 +25,8 @@ profileModule.directive('profileContent', function() {
 	        		'<material-content>'+
 	        			'<p>Description: {{news.Description}}</p>'+
 	        			'<p>Location: {{news.Location}}</p>'+
-	        			'<p>Price: {{news.Budget}}</p>'+
+	        			'<p>Budget: {{news.Budget}}</p>'+
+	        			'<p>Participants: {{news.Participants}}</p>'+
 	        		'<material-content>'+
 	        	'</material-card>'+
 	        '</material-card>'+
