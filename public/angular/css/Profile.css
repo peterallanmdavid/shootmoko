@@ -14,15 +14,20 @@
 .profile-option{
 	padding:0px;
 	margin: 5px;
-	background-color: white;
+	background-color: #F5F5F5;
 
 }
 .profile-content{
 	padding:0px;
 	margin: 5px;
 	min-height: 480px;
+	
 }
 .material-card-image-profile{
 	width: 76%;
 	height: 80%;
+}
+.profile-content-list-container{
+	text-align: left;
+	background-color: #F5F5F5;
 }

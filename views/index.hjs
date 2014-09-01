@@ -30,6 +30,8 @@
 	<!--include module for Profile Container-->
 	<script src="/angular/scripts/Profile/ProfileModule.js"></script>
 	<script src="/angular/scripts/Profile/directives/ProfileContainerDirective.js"></script>
+	<script src="/angular/scripts/Profile/directives/ProfileOptionDirective.js"></script>
+	<script src="/angular/scripts/Profile/directives/ProfileContentDirective.js"></script>
 	<script src="/angular/scripts/Profile/controllers/ProfileController.js"></script>
 
 	<!--include module for Portfolio Container-->
