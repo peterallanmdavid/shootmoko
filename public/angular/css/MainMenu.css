@@ -3,11 +3,17 @@
 }
 
 .container-header{
-	background-color: #8EC95F;
+	background-color: #3C948B;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 }
 
 
 #text-header{
 	color: white;
+	font-weight: 900;
+}
+
+#header-container{
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+	border: none;
 }

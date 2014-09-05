@@ -4,14 +4,26 @@ min-height: 500px;
 min-width: 700px;
 margin-left: 15%;
 margin-right: 15%;
-background-color: #FFF;
+background-color: whitesmoke;
+;
 }
 
 .photog-header-container{
 	padding:2%;
-	background-color: #F5F5F5;
+	background-color: #A9A993;
 }
 
 .categories-header{
 	margin-left: -6%;
+}
+
+
+.photog-posts-container{
+	box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.26);
+	min-height: 100px;
+	min-width: 600px;
+	margin: 2%;
+	background-color: #fff;
+	text-align: left;
+	padding: 1%;
 }

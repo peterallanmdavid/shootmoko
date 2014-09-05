@@ -1,33 +1,28 @@
 <div class = "photog-main-container">
 	<div class= "photog-header-container">
-	<div class="row">
-	  <div class="col-lg-3">
-	    <div class="input-group">
-	    <input type="text" class="form-control">
-	      <span class="input-group-btn">
-	        <button class="btn btn-default" type="button">Search</button>
-	      </span>
+		<div class="row">
+		  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+		    <div class="input-group">
+		    <input type="text" class="form-control">
+		      <span class="input-group-btn">
+		        <button class="btn btn-default" type="button">Search</button>
+		      </span>
 
-	    </div><!-- /input-group -->
-	  </div><!-- /.col-lg-6 -->
-	  <div class="categories-header col-lg-3">
-			<button type="button" data-toggle="dropdown" class="btn btn-primary dropdown-toggle">All Categories <span class="caret"></span></button>
-            <ul class="dropdown-menu pull-right">
-                <li><a href="#">Wedding</a></li>
-                <li><a href="#">Open Shoot</a></li>
-                <li><a href="#">Birthday</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Other Categories</a></li>
-         
-            </ul>
-	  </div>
-	  <!--/*
-	  <div class="categories-header col-lg-3">
-	  	<p>Open Shoots</p>	  	
-	  </div>
-	  <div class="categories-header col-lg-3">
-	  	<p>Other Categories</p>
-	  </div>-->
+		    </div><!-- /input-group -->
+		  </div><!-- /.col-lg-6 -->
+		  <div class="categories-header col-lg-3 col-md-3 col-sm-3 col-xs-3">
+				<button type="button" data-toggle="dropdown" class="btn btn-primary dropdown-toggle">All Categories <span class="caret"></span></button>
+	            <ul class="dropdown-menu pull-right">
+	                <li><a href="#">Wedding</a></li>
+	                <li><a href="#">Open Shoot</a></li>
+	                <li><a href="#">Birthday</a></li>
+	                <li class="divider"></li>
+	                <li><a href="#">Other Categories</a></li>	         
+	            </ul>
+		  </div>
+		</div>
 	</div>
+	<div ng-controller = "photographerController">
+		<div photog-posts-container></div>
 	</div>
 </div>
