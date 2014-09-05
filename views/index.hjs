@@ -17,8 +17,6 @@
 	<script src="angular/angular-material/angular-animate-stylers.js"></script>
 	<script src="angular/angular-material/material-design.js"></script>
 
-	<link rel="stylesheet" href="angular/css/PortfolioList.css" />
-	<link rel="stylesheet" href="angular/css/Profile.css" />
 	<link rel="stylesheet" href="angular/css/mainmenu.css" />
 	<link rel="stylesheet" href="angular/css/photographer.css" />
 	<!-- include angular stuffs-->	

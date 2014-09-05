@@ -27,3 +27,18 @@ background-color: whitesmoke;
 	text-align: left;
 	padding: 1%;
 }
+
+p {
+	margin: 0;
+}
+
+.post-detail{
+	padding-left: 2%;
+}
+
+.face {
+border-radius: 10px;
+border: 1px solid #DDD;
+width: 50px;
+margin:10%;
+}
