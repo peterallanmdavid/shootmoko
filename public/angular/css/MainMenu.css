@@ -1,10 +1,13 @@
-.logo {
-    padding: 10px;
-    height: 36px;
-    width: 100%;
+.main-container{
+	margin-top: 6%;
 }
 
-.centered {
-    margin-top: -5px;
-    padding-left: 48%
+.container-header{
+	background-color: #8EC95F;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+#text-header{
+	color: white;
 }

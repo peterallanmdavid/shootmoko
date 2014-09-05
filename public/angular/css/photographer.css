@@ -1,0 +1,17 @@
+.photog-main-container{
+box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.26);
+min-height: 500px;
+min-width: 700px;
+margin-left: 15%;
+margin-right: 15%;
+background-color: #FFF;
+}
+
+.photog-header-container{
+	padding:2%;
+	background-color: #F5F5F5;
+}
+
+.categories-header{
+	margin-left: -6%;
+}

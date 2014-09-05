@@ -6,7 +6,7 @@ mainModule.config(['$routeProvider', function($routeProvider) {
       }
     );
     
-    $routeProvider.when('/photographerhome',
+    $routeProvider.when('/photographerhome1',
       {
 		templateUrl: "/angular/views/photographer.html",
         controller: "AppCtrl"
@@ -16,6 +16,13 @@ mainModule.config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/clienthome',
       {
 		templateUrl: "/angular/views/lookingforphotographer.html",
+        controller: "AppCtrl"
+      }
+    );
+
+    $routeProvider.when('/photographerhome',
+      {
+        templateUrl: "/angular/views/photog.html",
         controller: "AppCtrl"
       }
     );
