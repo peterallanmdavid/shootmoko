@@ -1,2 +1,2 @@
-var mainModule= angular.module('mainModule',['photographerModule','ngRoute']);
+var mainModule= angular.module('mainModule',['photographerModule','mainHeaderModule','ngRoute']);
 
