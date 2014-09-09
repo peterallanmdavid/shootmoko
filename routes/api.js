@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var passport = require('passport');
 var Account = require('../models/account');
+var userPosts = require('../models/userposts');
 var jwt = require('jwt-simple');
 var moment = require('moment');
 var expires = moment().add('days', 7).valueOf();
@@ -95,6 +96,38 @@ router.get('/somerestrictedshit', function(req, res, next){
   		res.json({msg: 'no token'});
 	}
 
+});
+
+//format {"username":"Peter","title":"I am looking for a Wedding Photographer","details":"churva","budget":"3000.00","dateNeeded":"Tue Sep 09 2014 17:54:02 GMT+0800 (China Standard Time)","loc":"Makati City","typeOfShoot":"Wedding"}
+router.post('/addUserPost', function(req, res) {
+	var currDate = new Date();
+	var newUserPosts = new userPosts({
+		username: req.body.username,
+		title: req.body.title,
+		details: req.body.details,
+		budget: req.body.budget,
+		dateneeded: req.body.dateNeeded,
+		dateposted: currDate,
+		location: req.body.loc,
+		tpeofshoot: req.body.typeOfShoot
+		});
+
+	newUserPosts.save( function(error, data){
+	    if(error){
+	        res.json(error);
+	    }
+	    else{
+	        res.send({msg: "New Post Uploaded!!!"});
+	    }
+	});
+});
+
+
+router.get('/getUserPost',function(req, res){
+	userPosts.find({}, function(error, data){
+	    console.log(data);
+	    res.json(data);
+	});
 });
 
 module.exports = router;

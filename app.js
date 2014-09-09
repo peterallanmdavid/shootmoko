@@ -72,6 +72,7 @@ app.use(function(err, req, res, next) {
 // passport config
 
 var Account = require('./models/account');
+var userPosts = require('./models/userposts');
 passport.use(new LocalStrategy(Account.authenticate()));
 passport.serializeUser(Account.serializeUser());
 passport.deserializeUser(Account.deserializeUser());
