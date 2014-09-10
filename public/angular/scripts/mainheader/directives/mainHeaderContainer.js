@@ -12,7 +12,7 @@ mainHeaderModule.directive('mainHeaderContainer', function() {
             '</button>'+
             '<a id = "text-header"class="navbar-brand" href="#">Sh(&nbsp;&nbsp;.)(&nbsp;&nbsp;.)tmoko!</a>'+
           '</div>'+
-          '<div  class="collapse navbar-collapse">'+
+          '<div class="collapse navbar-collapse">'+
             '<ul id = "right-navigation" class="nav navbar-nav navbar-right">'+
                 '<li  class="dropdown col-md-5 col-sm-5 col-lg-5">'+
                   '<a id = "profile-pic" class="dropdown-toggle" data-toggle="dropdown">'+
@@ -30,6 +30,7 @@ mainHeaderModule.directive('mainHeaderContainer', function() {
                 '<p>Peter Allan David</p>'+
                 '</li>'+
            '</ul>'+
+          '</div>'+
           '</div>'+
         '</div>'+
       '</div>'

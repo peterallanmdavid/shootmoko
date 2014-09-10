@@ -19,6 +19,7 @@
 
 	<link rel="stylesheet" href="angular/css/mainmenu.css" />
 	<link rel="stylesheet" href="angular/css/photographer.css" />
+	<link rel="stylesheet" href="angular/css/client.css" />
 	<!-- include angular stuffs-->	
 	<script src="/angular/scripts/app.js"></script>
 	<script src="/angular/scripts/app-routes.js"></script>
@@ -27,12 +28,16 @@
 	<script src="/angular/scripts/mainheader/mainHeader.js"></script>
 	<script src="/angular/scripts/mainheader/directives/mainHeaderContainer.js"></script>
 
-
-
 	<!--include module for Photographer Container-->
 	<script src="/angular/scripts/photographer/photographer.js"></script>
 	<script src="/angular/scripts/photographer/directives/photogPostsContainer.js"></script>
 	<script src="/angular/scripts/photographer/controllers/photographerController.js"></script>
+
+
+	<!--include module for Client Container-->
+	<script src="/angular/scripts/client/client.js"></script>
+	<script src="/angular/scripts/client/directives/clientHeaderContainer.js"></script>
+	<script src="/angular/scripts/client/controllers/clientController.js"></script>
 
   </head>
   <body ng-app="mainModule">

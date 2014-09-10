@@ -5,27 +5,21 @@ mainModule.config(['$routeProvider', function($routeProvider) {
         controller: "AppCtrl"
       }
     );
-    
-    $routeProvider.when('/photographerhome1',
+    $routeProvider.when('/photographerhome',
       {
-		templateUrl: "/angular/views/photographer.html",
+        templateUrl: "/angular/views/photographerhome.html",
         controller: "AppCtrl"
       }
     );
 
     $routeProvider.when('/clienthome',
       {
-		templateUrl: "/angular/views/lookingforphotographer.html",
+		templateUrl: "/angular/views/clienthome.html",
         controller: "AppCtrl"
       }
     );
 
-    $routeProvider.when('/photographerhome',
-      {
-        templateUrl: "/angular/views/photog.html",
-        controller: "AppCtrl"
-      }
-    );
+
 
 }])
 
