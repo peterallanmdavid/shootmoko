@@ -25,6 +25,13 @@ mainModule.config(['$routeProvider', function($routeProvider) {
         controller: "userController"
       }
     );
+
+    $routeProvider.when('/listalluser',
+      {
+        templateUrl: "/angular/views/listalluser.html",
+        controller: "userController"
+      }
+    );
 }])
 
 //@todo move this to proper location
