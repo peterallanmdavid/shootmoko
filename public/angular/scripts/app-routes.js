@@ -2,20 +2,20 @@ mainModule.config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/',
       {
 		    templateUrl: "/angular/views/home.html",
-        controller: "AppCtrl"
+        controller: "AppCtrl" //change to actual controller
       }
     );
     $routeProvider.when('/photographerhome',
       {
         templateUrl: "/angular/views/photographerhome.html",
-        controller: "AppCtrl"
+        controller: "AppCtrl" //change to actual controller
       }
     );
 
     $routeProvider.when('/clienthome',
       {
 		    templateUrl: "/angular/views/clienthome.html",
-        controller: "AppCtrl"
+        controller: "AppCtrl" //change to actual controller
       }
     );
 
