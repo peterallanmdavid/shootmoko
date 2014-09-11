@@ -33,11 +33,14 @@
 	<script src="/angular/scripts/photographer/directives/photogPostsContainer.js"></script>
 	<script src="/angular/scripts/photographer/controllers/photographerController.js"></script>
 
-
 	<!--include module for Client Container-->
 	<script src="/angular/scripts/client/client.js"></script>
 	<script src="/angular/scripts/client/directives/clientHeaderContainer.js"></script>
 	<script src="/angular/scripts/client/controllers/clientController.js"></script>
+
+	<!--include module for User Controller (login/register/etc...)-->
+	<script src="/angular/scripts/user/user.js"></script>	
+	<script src="/angular/scripts/user/controllers/userController.js"></script>
 
   </head>
   <body ng-app="mainModule">
