@@ -3,17 +3,19 @@ var mongoose = require('mongoose'),
 
 
 var userPosts = new Schema({
+	userid: String,
     username: String,
     title: String,
-	username: String,
-	title: String,
 	details: String,
 	budget: String,
 	dateneeded: String,
 	dateposted: Date,
+	expiration: Date,
 	location: String,
-	tpeofshoot: String
-
+	typeofshoot: String,
+	enabled: Boolean,
+	tags: String,
+	posttype: String // photog/client 
 });
 
 

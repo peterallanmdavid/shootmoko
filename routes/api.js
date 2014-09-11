@@ -44,10 +44,11 @@ router.post('/login', function(req, res, next) {
     {
     	iss: user.username, 
     	username: user.username,
+    	id: user.id,
     	exp: expires
     }, tokenSecret);
     res.json({ 
-    	token : token,
+    	token : token,    	
     	expires: expires,
     	user: user.toJSON()
     });
@@ -99,7 +100,7 @@ router.get('/somerestrictedshit', function(req, res, next){
 });
 
 //format {"username":"Peter","title":"I am looking for a Wedding Photographer","details":"churva","budget":"3000.00","dateNeeded":"Tue Sep 09 2014 17:54:02 GMT+0800 (China Standard Time)","loc":"Makati City","typeOfShoot":"Wedding"}
-router.post('/addUserPost', function(req, res) {
+router.post('/adduserpost', function(req, res) {
 	var currDate = new Date();
 	var newUserPosts = new userPosts({
 		username: req.body.username,
@@ -109,7 +110,7 @@ router.post('/addUserPost', function(req, res) {
 		dateneeded: req.body.dateNeeded,
 		dateposted: currDate,
 		location: req.body.loc,
-		tpeofshoot: req.body.typeOfShoot
+		typeofshoot: req.body.typeOfShoot
 		});
 
 	newUserPosts.save( function(error, data){
@@ -122,9 +123,17 @@ router.post('/addUserPost', function(req, res) {
 	});
 });
 
+//get all posts by the userid
+router.get('/getuserposts/:userid',function(req, res){
+	userPosts.find({userid: req.params.userid}, function(error, data){
+	    console.log(data);
+	    res.json(data);
+	});
+});
 
-router.get('/getUserPost',function(req, res){
-	userPosts.find({}, function(error, data){
+//get details of a specific post
+router.get('/posts/:id',function(req, res){
+	userPosts.find({_id: req.params.id}, function(error, data){
 	    console.log(data);
 	    res.json(data);
 	});
