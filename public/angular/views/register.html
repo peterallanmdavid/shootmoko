@@ -1,4 +1,4 @@
-<form class="form-horizontal">
+<form class="form-horizontal" ng-submit="register()">
 <fieldset>
 
 <!-- Form Name -->
@@ -6,50 +6,50 @@
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Text Input</label>  
+  <label class="col-md-4 control-label" for="textinput">username</label>  
   <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">  
+  <input id="textinput" name="username" ng-model="user.username" type="text" placeholder="placeholder" class="form-control input-md">  
   </div>
 </div>
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Text Input</label>  
+  <label class="col-md-4 control-label" for="textinput">name</label>  
   <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">  
+  <input id="textinput" name="name" ng-model="user.name" type="text" placeholder="placeholder" class="form-control input-md">  
   </div>
 </div>
 
 <!-- Password input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="passwordinput">Password Input</label>
+  <label class="col-md-4 control-label" for="passwordinput">password</label>
   <div class="col-md-4">
-    <input id="passwordinput" name="passwordinput" type="password" placeholder="placeholder" class="form-control input-md">    
+    <input id="passwordinput" name="password" ng-model="user.password" type="password" placeholder="placeholder" class="form-control input-md">    
   </div>
 </div>
 
 <!-- Password input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="passwordinput">Password Input</label>
+  <label class="col-md-4 control-label" for="passwordinput">confirm password</label>
   <div class="col-md-4">
-    <input id="passwordinput" name="passwordinput" type="password" placeholder="placeholder" class="form-control input-md">    
+    <input id="passwordinput" name="passwordconfirm" ng-model="user.passwordconfirm" type="password" placeholder="placeholder" class="form-control input-md">    
   </div>
 </div>
 
 <!-- Multiple Radios -->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="radios">Multiple Radios</label>
+  <label class="col-md-4 control-label" for="radios">User Type</label>
   <div class="col-md-4">
   <div class="radio" style="text-align: left;">
     <label for="radios-0">
-      <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
-      Option one
+      <input type="radio" name="radios" ng-model="user.usertype" id="radios-0" value="photographer" checked="checked">
+      Photographer
     </label>
 	</div>
   <div class="radio" style="text-align: left;">
     <label for="radios-1">
-      <input type="radio" name="radios" id="radios-1" value="2">
-      Option two
+      <input type="radio" name="radios" ng-model="user.usertype" id="radios-1" value="client">
+      Looking For Photographer
     </label>
 	</div>
   </div>
