@@ -26,6 +26,20 @@ mainModule.config(['$routeProvider', function($routeProvider) {
       }
     );
 
+    $routeProvider.when('/login',
+      {
+        templateUrl: "/angular/views/login.html",
+        controller: "userController"
+      }
+    );
+
+    $routeProvider.when('/listalluser',
+      {
+        templateUrl: "/angular/views/listalluser.html",
+        controller: "userController"
+      }
+    );
+
     $routeProvider.when('/listalluser',
       {
         templateUrl: "/angular/views/listalluser.html",

@@ -37,6 +37,7 @@
 	<!--include module for User Controller (login/register/etc...)-->
 	<script src="/angular/scripts/user/user.js"></script>	
 	<script src="/angular/scripts/user/controllers/userController.js"></script>
+	<script src="/angular/scripts/user/directives/userList.js"></script>
 
   </head>
   <body ng-app="mainModule">
