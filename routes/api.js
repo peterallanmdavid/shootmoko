@@ -3,6 +3,7 @@ var router = express.Router();
 var passport = require('passport');
 var Account = require('../models/account');
 var userPosts = require('../models/userposts');
+var Photos = require('../models/photos');
 var jwt = require('jwt-simple');
 var moment = require('moment');
 var expires = moment().add('days', 7).valueOf();
@@ -58,7 +59,12 @@ router.post('/login', function(req, res, next) {
 
 
 router.get('/listallusers', function(req, res) {
-	Account.find(function(err,accounts){
+	// Account.find(function(err,accounts){
+	// 	if(err) res.send(err);
+	// 	res.json(accounts);
+	// }).populate('photos');
+
+	Account.find().populate('photos').exec(function(err,accounts){
 		if(err) res.send(err);
 		res.json(accounts);
 	});
@@ -137,6 +143,26 @@ router.get('/posts/:id',function(req, res){
 	    console.log(data);
 	    res.json(data);
 	});
+});
+
+//add photog photos
+router.get('/addphotos',function(req, res){
+	Account.findOne({username: "aldee1"},function(err, account){
+		var photos = new Photos({ 
+			userid : account.id, 
+			url: "/",
+			dateposted: ""
+		}); 
+		photos.save(function(err,data){
+			if(err){
+		        res.json(err);
+		    }
+		    else{
+		        res.send({msg: "Photos saved"});
+		    }
+		});
+	});
+	
 });
 
 module.exports = router;

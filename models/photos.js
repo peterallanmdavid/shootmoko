@@ -3,9 +3,9 @@ var mongoose = require('mongoose'),
 
 
 var photos = new Schema({
-	userid: String,
+	userid: {type: Schema.Types.ObjectId, ref: 'Account' },
 	url: String,
     dateposted: String
 });
 
-module.exports = mongoose.model('photos', photos);
+module.exports = mongoose.model('Photos', photos);

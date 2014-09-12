@@ -7,7 +7,9 @@ var Account = new Schema({
     username: String,
     password: String,
 	role: String,
-	usertype: String
+	usertype: String,
+	photos: [{ type: Schema.Types.ObjectId, ref: 'Photos' }]
+
 });
 
 
