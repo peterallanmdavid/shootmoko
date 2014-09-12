@@ -18,4 +18,64 @@ clientModule.controller('clientController',['$scope', function($scope) {
 		if (button==4)$scope.btn.bt4="active";
 
 	}
+
+	$scope.photographers = [
+		{
+			name: "Kris Taha",
+			location: "Quezon City",
+			rating: "5 Stars",
+			face : '/images/portfolio_list/pete.jpg',
+			price: 30000
+		},
+		{
+			name: "Allan Zabala",
+			location: "Quezon Cities",
+			rating: "4.9 Stars",
+			face : '/images/portfolio_list/emerson.jpg',
+			price: 30000
+		},
+		{
+			name: "Cyril Module",
+			location: "Quizon City",
+			rating: "4.5 Stars",
+			face : '/images/portfolio_list/frietz.jpg',
+			price: 30000
+		},
+		{
+			name: "Kris Taha",
+			location: "Quezon City",
+			rating: "5 Stars",
+			face : '/images/portfolio_list/pete.jpg',
+			price: 30000
+		},
+		{
+			name: "Allan Zabala",
+			location: "Quezon Cities",
+			rating: "4.9 Stars",
+			face : '/images/portfolio_list/emerson.jpg',
+			price: 30000
+		},
+		{
+			name: "Cyril Module",
+			location: "Quizon City",
+			rating: "4.5 Stars",
+			face : '/images/portfolio_list/frietz.jpg',
+			price: 30000
+		},
+		{
+			name: "Kris Taha",
+			location: "Quezon City",
+			rating: "5 Stars",
+			face : '/images/portfolio_list/pete.jpg',
+			price: 30000
+		},
+		{
+			name: "Allan Zabala",
+			location: "Quezon Cities",
+			rating: "4.9 Stars",
+			face : '/images/portfolio_list/emerson.jpg',
+			price: 30000
+		}				
+	];
+
 }]);
