@@ -1,4 +1,4 @@
-userModule.controller('userController',['$scope', '$http', function($scope, $http) {	
+userModule.controller('userController',['$scope', '$http', 'userMessagingService', 'pubSubService', function($scope, $http, userMessagingService, pubSubService) {	
 	$scope.msg = "(this msg is from userController)";
 	$scope.users = [];
 	$scope.msg = "";
@@ -28,6 +28,7 @@ userModule.controller('userController',['$scope', '$http', function($scope, $htt
 	        data: postdata
 		}).success(function (response) {
         	$scope.msg = JSON.stringify(response); //save token somewhere
+        	userMessagingService.userLoginSuccess();
 		}).error(function (errorResponse) {			
 			$scope.msg = "Error: " + JSON.stringify(errorResponse);
 		});
@@ -50,4 +51,12 @@ userModule.controller('userController',['$scope', '$http', function($scope, $htt
 			$scope.msg = "Error: " + JSON.stringify(errorResponse);
 		});
 	};
+	//publish login Successfull
+	$scope.publishLogin = function(){
+		pubSubService.loginSuccess($scope.msg.token);
+	};
+
+
+	userMessagingService.onUserLoginSuccess($scope, $scope.publishLogin);
+	
 }]);

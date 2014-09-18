@@ -1,1 +1,1 @@
-var mainHeaderModule= angular.module('mainHeaderModule',[]);
+var mainHeaderModule= angular.module('mainHeaderModule',['pubSubModule']);

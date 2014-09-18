@@ -20,9 +20,14 @@
 	<script src="/angular/scripts/app.js"></script>
 	<script src="/angular/scripts/app-routes.js"></script>
 
+	<!--include module for pubsub service -->
+	<script src="/angular/scripts/pubsub/pubSub.js"></script>
+	<script src="/angular/scripts/pubsub/services/pubSubService.js"></script>
+
 	<!--include module for Main Header Container-->
 	<script src="/angular/scripts/mainheader/mainHeader.js"></script>
 	<script src="/angular/scripts/mainheader/directives/mainHeaderContainer.js"></script>
+	<script src="/angular/scripts/mainheader/controllers/mainHeaderController.js"></script>
 
 	<!--include module for Photographer Container-->
 	<script src="/angular/scripts/photographer/photographer.js"></script>
@@ -38,6 +43,8 @@
 	<script src="/angular/scripts/user/user.js"></script>	
 	<script src="/angular/scripts/user/controllers/userController.js"></script>
 	<script src="/angular/scripts/user/directives/userList.js"></script>
+	<script src="/angular/scripts/user/services/UserMessagingService.js"></script>
+
 
   </head>
   <body ng-app="mainModule">

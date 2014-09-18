@@ -1,1 +1,1 @@
-var userModule= angular.module('userModule',[]);
+var userModule= angular.module('userModule',['pubSubModule']);
