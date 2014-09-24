@@ -43,7 +43,7 @@
 	<script src="/angular/scripts/user/user.js"></script>	
 	<script src="/angular/scripts/user/controllers/userController.js"></script>
 	<script src="/angular/scripts/user/directives/userList.js"></script>
-	<script src="/angular/scripts/user/services/UserMessagingService.js"></script>
+	<script src="/angular/scripts/user/services/userMessagingService.js"></script>
 
 
   </head>
