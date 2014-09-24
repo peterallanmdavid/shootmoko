@@ -2,11 +2,11 @@
 <fieldset>
 
 <!-- Form Name -->
-<legend>Form Name</legend>
+<legend>Login Page</legend>
 <h3 style="color: red">{{msg}}</h3>
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">name</label>  
+  <label class="col-md-4 control-label" for="textinput">username</label>  
   <div class="col-md-4">
   <input id="textinput" name="name" ng-model="user.username" type="text" placeholder="placeholder" class="form-control input-md">  
   </div>
@@ -24,6 +24,7 @@
   <label class="col-md-4 control-label" for="singlebutton"></label>
   <div class="col-md-4" style="text-align: left;">
     <button id="singlebutton" name="singlebutton" class="btn btn-primary">Login</button>
+    <a ng-href="#register">Sign Up</a>
   </div>
 </div>
 </fieldset>
