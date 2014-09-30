@@ -1,9 +1,7 @@
-mainHeaderModule.controller('mainHeaderController',['$scope', 'pubSubService', function($scope, pubSubService) {
+mainHeaderModule.controller('mainHeaderController',['$scope', 'pubSubService', 'userInfo', function($scope, pubSubService, userInfo) {
 	$scope.isLoggedIn = true;
-
-	$scope.showHeaderProfile = function (){
-		$scope.isLoggedIn = false;
-	};
-	pubSubService.onLoginSuccess($scope, $scope.showHeaderProfile);
-
+    $scope.userInfo = userInfo.userInfo;
+    $scope.$watch('userInfo',function(newV,oldV){
+        console.log(newV);
+    },true);
 }]);

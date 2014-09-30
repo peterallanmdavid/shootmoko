@@ -44,6 +44,7 @@
 	<script src="/angular/scripts/user/controllers/userController.js"></script>
 	<script src="/angular/scripts/user/directives/userList.js"></script>
 	<script src="/angular/scripts/user/services/userMessagingService.js"></script>
+	<script src="/angular/scripts/user/services/userInfo.js"></script>
 
 
   </head>

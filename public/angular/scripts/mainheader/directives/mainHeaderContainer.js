@@ -13,7 +13,7 @@ mainHeaderModule.directive('mainHeaderContainer', function() {
               '<a id = "text-header"class="navbar-brand" href="#">Sh(&nbsp;&nbsp;.)(&nbsp;&nbsp;.)tmoko!</a>'+
             '</div>'+
             '<div class="collapse navbar-collapse">'+
-              '<ul id = "right-navigation" class="nav navbar-nav navbar-right" ng-hide = "isLoggedIn">'+
+              '<ul id = "right-navigation" class="nav navbar-nav navbar-right" ng-show = "userInfo.isLoggedIn">'+
                   '<li  class="dropdown col-md-5 col-sm-5 col-lg-5">'+
                     '<a id = "profile-pic" class="dropdown-toggle" data-toggle="dropdown">'+
                     '<img ng-src="/images/portfolio_list/anonymousUser.jpg" class="profile-pic-img">'+
@@ -27,7 +27,7 @@ mainHeaderModule.directive('mainHeaderContainer', function() {
                     '</ul>'+
                   '</li>'+
                   '<li class ="profile-info col-md-7 col-sm-7 col-lg-7">'+
-                  '<p>Peter Allan David</p>'+
+                  '<p>({{userInfo.username}}) {{userInfo.name}} / {{userInfo.usertype}}</p>'+
                   '</li>'+
              '</ul>'+
             '</div>'+

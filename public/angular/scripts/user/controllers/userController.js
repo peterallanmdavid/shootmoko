@@ -1,4 +1,4 @@
-userModule.controller('userController',['$scope', '$http', 'userMessagingService', 'pubSubService', function($scope, $http, userMessagingService, pubSubService) {	
+userModule.controller('userController',['$scope', '$http', 'userMessagingService', 'pubSubService', 'userInfo', function($scope, $http, userMessagingService, pubSubService, userInfo) {
 	$scope.msg = "(this msg is from userController)";
 	$scope.users = [];
 	$scope.msg = "";
@@ -19,7 +19,7 @@ userModule.controller('userController',['$scope', '$http', 'userMessagingService
 		//move to a service
 		var postdata = {
 			username: $scope.user.username,
-			password: $scope.user.password,		
+			password: $scope.user.password
 		};
 		console.log(postdata);
 		$http({
@@ -28,11 +28,20 @@ userModule.controller('userController',['$scope', '$http', 'userMessagingService
 	        data: postdata
 		}).success(function (response) {
         	$scope.msg = JSON.stringify(response); //save token somewhere
-        	userMessagingService.userLoginSuccess();
+        	userMessagingService.userLoginSuccess(response);
 		}).error(function (errorResponse) {			
 			$scope.msg = "Error: " + JSON.stringify(errorResponse);
 		});
 	};
+
+    $scope.saveUserData = function(){
+
+    };
+
+    userMessagingService.onUserLoginSuccess($scope,function(event, data){
+        userInfo.setUserInfo(data);
+    });
+
 
 	$scope.register = function(){		
 		//move to a service
@@ -51,12 +60,5 @@ userModule.controller('userController',['$scope', '$http', 'userMessagingService
 			$scope.msg = "Error: " + JSON.stringify(errorResponse);
 		});
 	};
-	//publish login Successfull
-	$scope.publishLogin = function(){
-		pubSubService.loginSuccess($scope.msg.token);
-	};
-
-
-	userMessagingService.onUserLoginSuccess($scope, $scope.publishLogin);
 	
 }]);
