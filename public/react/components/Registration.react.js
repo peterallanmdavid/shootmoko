@@ -7,7 +7,7 @@ var RegistrationForm = React.createClass({
       <form className="registrationForm" onSubmit={this.handleSubmit}>
         <h3>Registration Form</h3>
         <input type="text" placeholder="Username" ref="username" /><br/>
-        <input type="text" placeholder="Username" ref="name" /><br/>
+        <input type="text" placeholder="Name" ref="name" /><br/>
         <input type="password" placeholder="Password" ref="password" /><br/>
         <input type="password" placeholder="Confirm Password" ref="confirm_password" /><br/>
         <b>user type</b><br/>
