@@ -9,6 +9,7 @@
     <script src="/react/components/RegistrationForm.react.js" type="text/jsx"></script>
     <script src="/react/components/UserItem.react.js" type="text/jsx"></script>
     <script src="/react/components/UsersList.react.js" type="text/jsx"></script>    
+    <script src="/react/components/UserInfo.react.js" type="text/jsx"></script>    
     <script src="/react/components/TmpHolder.react.js" type="text/jsx"></script>
   </head>
   <body>	

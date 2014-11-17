@@ -37,6 +37,9 @@ var userList = [
 ];
 
 
+var userInfo = {"username":"test","role":"user","usertype":"photographer","photos":[],"id":"5411580bf7cc05d437e01675"};
+
+
 var TmpHolder = React.createClass({  
   render: function() {
     return (
@@ -45,6 +48,7 @@ var TmpHolder = React.createClass({
         <LoginForm />
         <RegistrationForm />        
         <UsersList />
+        <UserInfo data={userInfo}/>        
       </div>
     );
   }
