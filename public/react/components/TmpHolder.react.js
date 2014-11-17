@@ -4,7 +4,8 @@ var TmpHolder = React.createClass({
       <div className="commentBox">
         <h1>Temp Component Holder</h1>
         <LoginForm />
-        <RegistrationForm />        
+        <RegistrationForm />     
+        <PhotogList />   
       </div>
     );
   }

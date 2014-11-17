@@ -7,7 +7,10 @@
     <!-- React Components -->
     <script src="/react/components/Login.react.js" type="text/jsx"></script>    
     <script src="/react/components/Registration.react.js" type="text/jsx"></script>
+    <script src="/react/components/PhotogList.react.js" type="text/jsx"></script>
+    <script src="/react/components/PhotogDetails.react.js" type="text/jsx"></script>
     <script src="/react/components/TmpHolder.react.js" type="text/jsx"></script>
+
   </head>
   <body>	
 	<div id="content"></div>
