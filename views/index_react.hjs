@@ -5,8 +5,10 @@
     <script src="http://fb.me/JSXTransformer-0.12.0.js"></script>
     <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>    
     <!-- React Components -->
-    <script src="/react/components/Login.react.js" type="text/jsx"></script>    
-    <script src="/react/components/Registration.react.js" type="text/jsx"></script>
+    <script src="/react/components/LoginForm.react.js" type="text/jsx"></script>        
+    <script src="/react/components/RegistrationForm.react.js" type="text/jsx"></script>
+    <script src="/react/components/UserItem.react.js" type="text/jsx"></script>
+    <script src="/react/components/UsersList.react.js" type="text/jsx"></script>    
     <script src="/react/components/TmpHolder.react.js" type="text/jsx"></script>
   </head>
   <body>	
