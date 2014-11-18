@@ -1,18 +1,27 @@
 <html>
   <head>
     <title>Hello React</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"> 
+	<!-- <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" href="http://getbootstrap.com/examples/navbar-fixed-top/navbar-fixed-top.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
     <script src="http://fb.me/react-0.12.0.js"></script>
     <script src="http://fb.me/JSXTransformer-0.12.0.js"></script>
     <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>    
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <!-- React Components -->
+    <script src="/react/components/PhotogList.react.js" type="text/jsx"></script>
+    <script src="/react/components/PhotogDetails.react.js" type="text/jsx"></script>
     <script src="/react/components/LoginForm.react.js" type="text/jsx"></script>        
     <script src="/react/components/RegistrationForm.react.js" type="text/jsx"></script>
     <script src="/react/components/UserItem.react.js" type="text/jsx"></script>
     <script src="/react/components/UsersList.react.js" type="text/jsx"></script>    
-    <script src="/react/components/UserInfo.react.js" type="text/jsx"></script>    
-    <script src="/react/components/TmpHolder.react.js" type="text/jsx"></script>
+    <script src="/react/components/UserInfo.react.js" type="text/jsx"></script>        
+    <!-- <script src="/react/components/TmpHolder.react.js" type="text/jsx"></script> -->
+	<script src="/react/components/ShootmokoApp.react.js" type="text/jsx"></script>
+
   </head>
-  <body>	
-	<div id="content"></div>
+  <body id="smkbody">	
+	<!-- <div id="tmpcontainer"></div> -->
   </body>
   </html>
