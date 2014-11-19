@@ -55,7 +55,7 @@ var TmpHolder = React.createClass({
   }
 });
 
-React.render(
+/*React.render(
   <TmpHolder />,
   document.getElementById('tmpcontainer')
-);
+);*/
