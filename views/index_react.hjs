@@ -20,8 +20,8 @@
   <script src="/react/components/UserInfo.react.js" type="text/jsx"></script>        
   <script src="/react/components/TmpHolder.react.js" type="text/jsx"></script>
   <script src="/react/components/NavBar.react.js" type="text/jsx"></script>
+  <script src="/react/components/Body.react.js" type="text/jsx"></script>  
   <script src="/react/components/ShootmokoApp.react.js" type="text/jsx"></script>
-
 
   </head>
   <body id="smkbody">	

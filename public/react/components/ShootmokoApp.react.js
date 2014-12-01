@@ -3,6 +3,7 @@ var ShootmokoApp = React.createClass({
     return (
       	<div>
 		   	<NavBar />
+		   	<Body />
 		</div>
     );
   }
