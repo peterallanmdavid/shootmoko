@@ -4,14 +4,8 @@ var ShootmokoApp = React.createClass({
     return (
       	<div>
 		   	<NavBar />
-		   	<RouteHandler/>
-		   	//<Body />
+		   	<RouteHandler/>		   	
 		</div>
     );
   }
 });
-
-// React.render(
-//   <ShootmokoApp />,
-//   document.getElementById('smkbody')
-// );
