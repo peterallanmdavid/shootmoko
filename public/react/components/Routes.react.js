@@ -6,8 +6,9 @@ var Link = ReactRouter.Link;
 
 var routes = (  
     <Route name="app" path="/" handler={ShootmokoApp}>      
-       <Route name="peter" handler={Body}/>
-       <DefaultRoute handler={Body} />
+       <Route name="PhotogList" handler={PhotogList}/>
+       <Route name="TmpHolder" handler={TmpHolder}/>  
+       <DefaultRoute handler={Home} />
     </Route>
 );
 
