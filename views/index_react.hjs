@@ -5,6 +5,8 @@
 	<!-- <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css"> -->
 	<link rel="stylesheet" href="http://getbootstrap.com/examples/navbar-fixed-top/navbar-fixed-top.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="/stylesheets/login.css">
+
 
   <script src="http://fb.me/react-0.12.0.js"></script>
   <script src="http://fb.me/JSXTransformer-0.12.0.js"></script>
