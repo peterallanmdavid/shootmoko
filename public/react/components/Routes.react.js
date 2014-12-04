@@ -1,13 +1,16 @@
-var Router = ReactRouter;
-var Route = ReactRouter.Route;
-var Routes = ReactRouter.Routes;
-var DefaultRoute = ReactRouter.DefaultRoute;
-var Link = ReactRouter.Link;
+var  Router = ReactRouter
+	,Route = ReactRouter.Route
+	,Routes = ReactRouter.Routes
+	,DefaultRoute = ReactRouter.DefaultRoute
+	,Link = ReactRouter.Link
+	,RouteHandler = ReactRouter.RouteHandler;
 
 var routes = (  
     <Route name="app" path="/" handler={ShootmokoApp}>      
        <Route name="PhotogList" handler={PhotogList}/>
        <Route name="TmpHolder" handler={TmpHolder}/>  
+       <Route name="login" handler={LoginForm}/>
+       <Route name="register" handler={RegistrationForm}/>
        <DefaultRoute handler={Home} />
     </Route>
 );
