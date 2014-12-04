@@ -15,8 +15,10 @@
   <!-- React Components -->
   
   <link rel="stylesheet" href="/react/styles/ShootMoko.react.css">    
-  <script src="/react/components/PhotogList.react.js" type="text/jsx"></script>
-  <script src="/react/components/PhotogDetails.react.js" type="text/jsx"></script>
+  <script src="/react/components/PhotogsList/PhotogList.react.js" type="text/jsx"></script>
+  <script src="/react/components/PhotogsList/PhotogsListContainer.react.js" type="text/jsx"></script>
+  <script src="/react/components/PhotogsList/PhotogsListBestShot.react.js" type="text/jsx"></script>
+    <script src="/react/components/PhotogsList/PhotogListModals.react.js" type="text/jsx"></script>
   <script src="/react/components/LoginForm.react.js" type="text/jsx"></script>        
   <script src="/react/components/RegistrationForm.react.js" type="text/jsx"></script>
   <script src="/react/components/UserItem.react.js" type="text/jsx"></script>

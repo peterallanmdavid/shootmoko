@@ -30,5 +30,29 @@ border-radius: 4px;;
 
 .photogListContainer .row{
 	margin: 0;
+	margin-top: 15px;
 }
 
+.profilePicture{
+	width: 20%
+}
+
+.bestShotModal{
+	margin-left: 10%;
+	margin-right: 10%;
+	height: 600px;
+}
+
+.bestShotModal .modelImage {
+	width: 80%;
+	text-align: center;
+
+}
+
+
+.bestShotModal .modalBody{
+	text-align: center;
+}
+.modalContent{
+	padding: 2%;
+}

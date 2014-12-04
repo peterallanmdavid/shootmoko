@@ -21,7 +21,7 @@
   render: function() {
     return (     
       <div> 
-        <PhotogDetails items={this.state.pDetails} />
+        <PhotogsListContainer items={this.state.pDetails} />
       </div>
     );
   }

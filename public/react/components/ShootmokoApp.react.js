@@ -4,6 +4,7 @@ var ShootmokoApp = React.createClass({
     return (
       	<div>
 		   	<NavBar />
+			<PhotogListModals />
 		   	<RouteHandler/>		   	
 		</div>
     );
