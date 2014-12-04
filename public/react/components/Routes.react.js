@@ -7,8 +7,8 @@ var  Router = ReactRouter
 
 var routes = (  
     <Route name="app" path="/" handler={ShootmokoApp}>      
-       <Route name="PhotogList" handler={PhotogList}/>
-       <Route name="TmpHolder" handler={TmpHolder}/>  
+       <Route name="photoglist" handler={PhotogList}/>
+       <Route name="tmpholder" handler={TmpHolder}/>  
        <Route name="login" handler={LoginForm}/>
        <Route name="register" handler={RegistrationForm}/>
        <DefaultRoute handler={Home} />
