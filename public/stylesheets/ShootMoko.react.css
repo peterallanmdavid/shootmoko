@@ -64,3 +64,19 @@ border-radius: 4px;;
 	background-color: white;
 	outline:none !important;
 }
+
+.photogListDetails{
+	border-right: 1px solid #ccc;
+
+}
+
+.photogListSchedule{
+	font-size: 11px;
+	padding: 1%;
+
+}
+
+.photogListSchedule .pre-scrollable{
+	max-height: 140px;
+	overflow-y: auto;
+}

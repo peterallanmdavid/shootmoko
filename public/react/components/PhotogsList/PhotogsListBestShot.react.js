@@ -13,7 +13,7 @@ var PhotogsListBestShot = React.createClass({
 		});
 		return(
 				<div>
-				<h3>Best Shots:</h3>
+				<h4>Best Shots:</h4>
 					<div className = "PhotogsListBestShot"  >					
 				     	<div className = "row">
 							{pListBestShot}
