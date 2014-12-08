@@ -43,11 +43,24 @@ border-radius: 4px;;
 	text-align: center;
 
 }
-
-
 .bestShotModal .modalBody{
 	text-align: center;
 }
 .modalContent{
 	padding: 2%;
+}
+
+.modal-open{
+	overflow: auto;
+}
+
+.plist{
+	padding: 2%;
+	background-color: white;
+}
+
+.plist:focus{
+	padding: 2%;
+	background-color: white;
+	outline:none !important;
 }

@@ -20,7 +20,6 @@ var PhotogListModals = React.createClass({
 			    		×</span>
 			    		<span className="sr-only">Close</span>
 			    		</button>
-				    	<h4 class="modal-title" id="myModalLabel">Picture 1</h4>
 			    	</div>
 
 			    	<div className="modal-body">
