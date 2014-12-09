@@ -86,6 +86,11 @@ border-radius: 4px;;
 
 .photogListSchedule .pre-scrollable{
 	max-height: 140px;
+	overflow-y: hidden;
+}
+
+.photogListSchedule .pre-scrollable:hover{
+
 	overflow-y: auto;
 }
 
