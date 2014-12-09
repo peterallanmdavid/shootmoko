@@ -64,6 +64,14 @@ border-radius: 4px;;
 	background-color: white;
 	outline:none !important;
 }
+.plist >img{
+	box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.22);
+	border-color: gray;
+	border-width: 1px;
+	border-style: solid;
+}
+
+
 
 .photogListDetails{
 	border-right: 1px solid #ccc;
@@ -79,4 +87,8 @@ border-radius: 4px;;
 .photogListSchedule .pre-scrollable{
 	max-height: 140px;
 	overflow-y: auto;
+}
+
+.photogListDetails .nav >li>a{
+	padding:0;
 }

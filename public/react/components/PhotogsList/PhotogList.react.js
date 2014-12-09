@@ -7,14 +7,16 @@
                 name: 'Peter Allan David',
                 type: 'Wedding Photography',
                 level: 'Newbee',
-                shootCount: 35
+                shootCount: 35,
+                portfolioCount: 45
               },
               {
                 userId : 002,
                 name: 'Aldee Paul',
                 type: 'Wild Photography',
                 level: 'Pro',
-                shootCount: 889
+                shootCount: 889,
+                portfolioCount: 32
               }
             ],
             pBestShots:[]

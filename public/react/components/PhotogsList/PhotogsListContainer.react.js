@@ -20,12 +20,16 @@ var PhotogsListContainer = React.createClass({
 				<div className="thumbnail row">
 					<div className = "photogListDetails col-md-6"  key = {item.userId}>
 					    <div className="col-md-6" >
-					    	<div className = "profileDetails row">
+					    	<div className = "row">
 						      	<img className = "profilePicture" src="/images/portfolio_list/anonymousUser.jpg" alt="..."/>
-	      				        <h4>{item.name}</h4>
+	      				        <h4><a href = "#">{item.name}</a></h4>
 						        <p>Type: {item.type}</p>		
 						        <p>Level: {item.level}</p>	
-						        <p>Shoot Count: {item.shootCount}</p>						        
+						        <p>ShootCount:{item.shootCount}</p>	
+						        <p><ul className="nav nav-pills" role="tablist">
+									  <li role="presentation"><a href="#">View Portfolio <span className="badge">{item.portfolioCount}</span></a></li>
+									</ul>
+								</p>					        
 					        </div> 
 					    </div>
 					    <div className = "col-md-6">
