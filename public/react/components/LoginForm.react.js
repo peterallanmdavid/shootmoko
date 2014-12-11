@@ -1,6 +1,7 @@
 var LoginForm = React.createClass({  
   handleSubmit: function(e) {
     e.preventDefault();    
+    console.log('Logging in....');
   },
   render: function() {
     return (            
