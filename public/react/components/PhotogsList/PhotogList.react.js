@@ -8,6 +8,9 @@
                 type: 'Wedding Photography',
                 level: 'Newbee',
                 shootCount: 35,
+                profilePicUrl: "/images/portfolio_list/pete.jpg",
+                location: "Cavite",
+                status: "offline",
                 portfolioCount: 45
               },
               {
@@ -16,6 +19,9 @@
                 type: 'Wild Photography',
                 level: 'Pro',
                 shootCount: 889,
+                profilePicUrl: "/images/portfolio_list/aldee.jpg",
+                location: "Mandaluyong",
+                status: "offline",
                 portfolioCount: 32
               }
             ],
@@ -26,7 +32,6 @@
   render: function() {
     return (     
       <div> 
-        <PhotogListModals />
         <PhotogsListContainer items={this.state.pDetails} />
       </div>
     );

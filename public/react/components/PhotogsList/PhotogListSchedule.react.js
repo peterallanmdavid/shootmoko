@@ -2,7 +2,7 @@ var PhotogListSchedule = React.createClass({
 	render: function(){
 		var schedules = this.props.psched.map(function (sched){
 			return(
-				<div  key = {sched.schedId} >
+				<div key = {sched.schedId} >
 						<ul>
 							<li>
 								<p>Event: {sched.desc}</p>
@@ -13,13 +13,11 @@ var PhotogListSchedule = React.createClass({
 			);
 		});
 
-		return(
-			<div>
-				<h4>Photographers Schedule</h4>
+		return(				
 				<div className = "pre-scrollable row">
-					{schedules}
+					<h4>Photographers Schedule</h4>
+						{schedules}
 				</div>
-			</div>
 		);
 	}
 });

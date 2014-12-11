@@ -22,7 +22,8 @@
 
   <script src="/react/components/PhotogsList/PhotogsListBestShot.react.js" type="text/jsx"></script>
   <script src="/react/components/PhotogsList/PhotogListModals.react.js" type="text/jsx"></script>
-  <script src="/react/components/PhotogsList/PhotogsListContainer.react.js" type="text/jsx"></script>
+  <script src="/react/components/PhotogsList/PhotogListDetails.react.js" type="text/jsx"></script>
+  <script src="/react/components/PhotogsList/PhotogListContainer.react.js" type="text/jsx"></script>
   <script src="/react/components/PhotogsList/PhotogListSchedule.react.js" type="text/jsx"></script>
   <script src="/react/components/PhotogsList/PhotogListActions.react.js" type="text/jsx"></script>
 
