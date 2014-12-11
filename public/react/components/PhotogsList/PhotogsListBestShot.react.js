@@ -1,36 +1,23 @@
 var PhotogsListBestShot = React.createClass({
 	render: function(){
-		return(
-				<div className = "PhotogsListBestShot" >
-					<p>Best Shots:</p>
-			     	<div className = "row">
-				        <div className="col-xs-6 col-md-6">
-							<a href="#" data-target=".bestShotModal" role="button"  data-toggle="modal">
-							  <img src="/images/portfolio_list/gallery.png" alt="..."/>
+		var  pListBestShot = this.props.photoList.map(function (pList){
+			return(
+				
+				        <div className="col-xs-6 col-md-6 col-lg-6" key ={pList.photoId}>
+							<a href="#" className = "pList" data-target=".bestShotModal" role="button"  data-toggle="modal" data-whatever={pList.photoUrl}>
+							  <img src={pList.photoUrl} alt="..."/>
 							</a>						
 						</div> 
-						<div className="col-xs-6 col-md-6">
-							<a href="#" >
-							  <img src="/images/portfolio_list/gallery.png" alt="..."/>
-							</a>
-						</div>
-					</div>  
+	
+			)
+		});
+		return(
+				<div>
+					<h4>Best Shots:</h4>				
 			     	<div className = "row">
-				        <div className="col-xs-6 col-md-6">
-							<a href="#" >
-							  <img src="/images/portfolio_list/gallery.png" alt="..."/>
-							</a>
-						</div> 
-						<div className="col-xs-6 col-md-6">
-							<a href="#" >
-							  <img src="/images/portfolio_list/gallery.png" alt="..."/>
-							</a>
-						</div>
-					</div> 
+						{pListBestShot}
+					</div>
 				</div>
-
-
-
 		);
 	}
 });

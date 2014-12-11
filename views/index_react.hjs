@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="http://getbootstrap.com/examples/navbar-fixed-top/navbar-fixed-top.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="/stylesheets/login.css">
+    <link rel="stylesheet" href="/stylesheets/ShootMoko.react.css">    
 
 
   <script src="http://fb.me/react-0.12.0.js"></script>
@@ -16,11 +17,15 @@
   <script src="/react/plugins/react-router.min.js"></script>
   <!-- React Components -->
   
-  <link rel="stylesheet" href="/react/styles/ShootMoko.react.css">    
+
   <script src="/react/components/PhotogsList/PhotogList.react.js" type="text/jsx"></script>
-  <script src="/react/components/PhotogsList/PhotogsListContainer.react.js" type="text/jsx"></script>
+
   <script src="/react/components/PhotogsList/PhotogsListBestShot.react.js" type="text/jsx"></script>
-    <script src="/react/components/PhotogsList/PhotogListModals.react.js" type="text/jsx"></script>
+  <script src="/react/components/PhotogsList/PhotogListModals.react.js" type="text/jsx"></script>
+  <script src="/react/components/PhotogsList/PhotogsListContainer.react.js" type="text/jsx"></script>
+  <script src="/react/components/PhotogsList/PhotogListSchedule.react.js" type="text/jsx"></script>
+  <script src="/react/components/PhotogsList/PhotogListActions.react.js" type="text/jsx"></script>
+
   <script src="/react/components/LoginForm.react.js" type="text/jsx"></script>        
   <script src="/react/components/RegistrationForm.react.js" type="text/jsx"></script>
   <script src="/react/components/UserItem.react.js" type="text/jsx"></script>

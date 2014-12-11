@@ -30,6 +30,7 @@ border-radius: 4px;;
 
 .photogListContainer .row{
 	margin: 0;
+	margin-bottom: 15px;
 	margin-top: 15px;
 }
 
@@ -37,22 +38,55 @@ border-radius: 4px;;
 	width: 20%
 }
 
-.bestShotModal{
-	margin-left: 10%;
-	margin-right: 10%;
-	height: 600px;
-}
-
 .bestShotModal .modelImage {
-	width: 80%;
+	width: 100%;
 	text-align: center;
 
 }
-
-
 .bestShotModal .modalBody{
 	text-align: center;
 }
 .modalContent{
 	padding: 2%;
+}
+
+.modal-open{
+	overflow: auto;
+}
+
+.plist{
+	padding: 2%;
+	background-color: white;
+}
+
+.plist:focus{
+	padding: 2%;
+	background-color: white;
+	outline:none !important;
+}
+.plist >img{
+	box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.22);
+	border-color: gray;
+	border-width: 1px;
+	border-style: solid;
+}
+
+.photogListSchedule{
+	font-size: 11px;
+	padding: 1%;
+
+}
+
+.photogListSchedule .pre-scrollable{
+	max-height: 140px;
+	overflow-y: hidden;
+}
+
+.photogListSchedule .pre-scrollable:hover{
+
+	overflow-y: auto;
+}
+
+.photogListDetails .nav >li>a{
+	padding:0;
 }

@@ -2,6 +2,14 @@ var divStyle = {
 	height: "984px"
 };
 var PhotogListModals = React.createClass({
+  	componentDidMount : function() {         
+		$('.bestShotModal').on('show.bs.modal', function (event) {
+  			  var button = $(event.relatedTarget);
+			  var imgSrc = button.data('whatever') ;
+			  var modal = $(this);
+			  $('.modelImage').attr('src',imgSrc);
+		 });
+    }, 
 	render: function(){
 		return(
 			<div className="modal fade bestShotModal" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -12,13 +20,12 @@ var PhotogListModals = React.createClass({
 			    		×</span>
 			    		<span className="sr-only">Close</span>
 			    		</button>
-				    	<h4 class="modal-title" id="myModalLabel">Picture 1</h4>
 			    	</div>
 
 			    	<div className="modal-body">
 			    		<div className = "modalBody">
-				    	<img  className = "modelImage" src="/images/bg1.jpg" alt="..."/>
-				    	 </div>
+				    		<img  className = "modelImage" src="/images/bg1.jpg" alt="..."/>
+			    	 	</div>
 				    </div>
 			    </div>
 			</div>
