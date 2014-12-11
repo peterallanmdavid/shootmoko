@@ -16,7 +16,7 @@ var routes = (
 );
 
 //React.render(routes, document.getElementById('smkbody'));
-Router.run(routes, function (Handler) {
-  React.render(<Handler/>, document.getElementById('smkbody'));
+Router.run(routes, function (Handler) {  
+  React.render(<Handler />, document.getElementById('smkbody'));
 });
 
