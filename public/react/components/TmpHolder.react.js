@@ -45,9 +45,9 @@ var TmpHolder = React.createClass({
     return (
       <div className="commentBox">
         <h1>Temp Component Holder</h1>
-        <LoginForm />  
+        <LoginForm onLogin={this.props.onLogin} loginData={this.props.loginData}/>  
         <RegistrationForm />        
-        <UsersList />
+        <UsersList data={userList}/>
         <UserInfo data={userInfo}/>        
       </div>
     );

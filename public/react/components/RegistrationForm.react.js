@@ -16,12 +16,17 @@ var RegistrationForm = React.createClass({
         type: 'POST',
         data: postdata,
         success: function(data) {
-          this.setState({ registermsg: "Registration successfull " + JSON.stringify(data) });
-          this.refs.username.getDOMNode().value = '';
-          this.refs.name.getDOMNode().value = '';
-          this.refs.password.getDOMNode().value = '';
-          this.refs.confirm_password.getDOMNode().value = '';
-          this.refs.usertype.getDOMNode().value = '';
+          if(data.success){
+            this.setState({ registermsg: "Registration successfull " + JSON.stringify(data) });
+            this.refs.username.getDOMNode().value = '';
+            this.refs.name.getDOMNode().value = '';
+            this.refs.password.getDOMNode().value = '';
+            this.refs.confirm_password.getDOMNode().value = '';
+            this.refs.usertype.getDOMNode().value = '';  
+          }else{
+            this.setState({ registermsg: "Registration error: " + data.msg.message });
+          }
+          
         }.bind(this),
         error: function(xhr, status, err) {          
           this.setState({ registermsg: "Registration error " + err.toString() });

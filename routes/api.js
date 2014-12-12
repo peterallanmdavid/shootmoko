@@ -24,10 +24,10 @@ router.post('/register', function(req, res) {
 		}), req.body.password, function(err, account) {
         if (err) {
         	console.log(err);
-            res.send({msg: err});
+            res.send({success: false, msg: err});
         }else{
         	console.log("success");
-        	res.send({msg: "register success"});
+        	res.send({success: true, msg: "register success"});
         }
     });
 });
@@ -37,7 +37,7 @@ router.post('/login', function(req, res, next) {
 	passport.authenticate('local', function(err, user, info) {
     if (err) { return next(err); }
     if (!user) {
-      return res.json(401, { error: 'login error' });
+      return res.json(401, { success: false, error: 'login error' });
     }
 
     //user has authenticated correctly thus we create a JWT token 
@@ -49,6 +49,7 @@ router.post('/login', function(req, res, next) {
     	exp: expires
     }, tokenSecret);
     res.json({ 
+    	success: true,
     	token : token,    	
     	expires: expires,
     	user: user.toJSON()
@@ -147,22 +148,33 @@ router.get('/posts/:id',function(req, res){
 
 //add photog photos
 router.get('/addphotos',function(req, res){
-	Account.findOne({username: "aldee1"},function(err, account){
-		var photos = new Photos({ 
-			userid : account.id, 
-			url: "/",
-			dateposted: ""
-		}); 
-		photos.save(function(err,data){
-			if(err){
-		        res.json(err);
-		    }
-		    else{
-		        res.send({msg: "Photos saved"});
-		    }
-		});
-	});
-	
+    var token = (req.body && req.body.access_token) || (req.query && req.query.access_token) || req.headers['x-access-token'];
+    if (token) {
+        try {
+            var decoded = jwt.decode(token, tokenSecret);
+            if (decoded.exp <= Date.now()) {
+                res.end('Access token has expired', 400);
+            }
+
+            var photos = new Photos({
+                userid : decoded.id,
+                url: "/",
+                dateposted: ""
+            });
+
+            photos.save(function(err,data){
+                if(err){
+                    res.json(err);
+                }
+                else{
+                    res.send({msg: "Photos saved"});
+                }
+            });
+            // handle token here
+        } catch (err) {
+            return next();
+        }
+    }
 });
 
 module.exports = router;
