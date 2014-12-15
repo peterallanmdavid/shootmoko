@@ -21,8 +21,13 @@ var UploadForm = React.createClass({
     	});
 	},
 	render: function() {
+		var containerStyle = {
+			"max-width": "330px",
+			"padding": "15px",
+			"margin": "0 auto"
+		};
 		return (
-			<div>
+			<div  style={containerStyle} >
 			<span className="btn btn-success fileinput-button">
 	        	<i className="glyphicon glyphicon-plus"></i>
 	        	<span>Select files...</span>        	
