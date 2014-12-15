@@ -3,7 +3,7 @@ var mongoose = require('mongoose'),
     passportLocalMongoose = require('passport-local-mongoose');
 
 
-var Account = new Schema({
+var accountSchema = new Schema({
     username: String,
     password: String,
 	role: String,
@@ -13,7 +13,7 @@ var Account = new Schema({
 });
 
 
-Account.options.toJSON = {
+accountSchema.options.toJSON = {
 	    transform: function(doc, ret, options) {
 	        ret.id = ret._id;
 	        delete ret._id;
@@ -25,6 +25,6 @@ Account.options.toJSON = {
 };
 
 
-Account.plugin(passportLocalMongoose);
+accountSchema.plugin(passportLocalMongoose);
 
-module.exports = mongoose.model('Account', Account);
+module.exports = mongoose.model('Account', accountSchema);

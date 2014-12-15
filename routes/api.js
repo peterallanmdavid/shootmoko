@@ -82,9 +82,15 @@ router.get('/listallusers', function(req, res) {
 });
 
 router.get('/listallphotographers', function(req, res) {
-	Account.find({usertype: "photographer"},function(err,accounts){
-		if(err) res.send(err);
-		res.json(accounts);
+	// Account.find({usertype: "photographer"},function(err,accounts){
+	// 	if(err) res.send(err);
+	// 	res.json(accounts);
+	// });
+	Account
+	.find({ usertype: 'photographer' })
+	.populate('photos')
+	.exec(function (err, accounts) {
+  		res.json(accounts);
 	});
 });
 
@@ -156,40 +162,6 @@ router.get('/posts/:id',function(req, res){
 	});
 });
 
-//add photog photos
-router.get('/addphotos',function(req, res){
-    var token = (req.body && req.body.access_token) || (req.query && req.query.access_token) || req.headers['x-access-token'];
-    if (token) {
-        try {
-            var decoded = jwt.decode(token, tokenSecret);
-            if (decoded.exp <= Date.now()) {
-                res.end('Access token has expired', 400);
-            }
-
-            var photos = new Photos({
-                userid : decoded.id,
-                url: "/",
-                dateposted: ""
-            });
-
-            photos.save(function(err,data){
-                if(err){
-                    res.json(err);
-                }
-                else{
-                    res.send({msg: "Photos saved"});
-                }
-            });
-            // handle token here
-        } catch (err) {
-            return next();
-        }
-    }
-});
-
-
-
-
 //-- File Upload API --//
 //-- You need a valid token to upload to this --//
 
@@ -202,26 +174,31 @@ router.post('/uploadphotos', function(req,res){
                 res.end('Access token has expired', 400);
             }
             if(decoded.id){
-            	uploader.post(req, res, function (obj) {
-            		var result = [];            		
-        			for(var i=0; i < obj.files.length;i++){        				
-	        			var photos = new Photos({
-			                userid : decoded.id,
-			                url: obj.files[i].url,			                
-			                dateposted: Date.now()
-		            	});
+            	Account.findOne({_id: decoded.id}).exec(function(err,user){
+            		if(err) res.send({success: false, msg: "an error occurred (user not found??)"});
+	            	uploader.post(req, res, function (obj) {
+	            		var result = [];            		
+	        			for(var i=0; i < obj.files.length;i++){        				
+		        			var photos = new Photos({
+				                userid : decoded.id,
+				                url: obj.files[i].url,			                
+				                dateposted: Date.now()
+			            	});
 
-			            photos.save(function(err,data){
-			                if(err){			                    
-			                    result.push(err);
-			                }
-			                else{
-			                	result.push({msg: "saved"});			                    
-			                }
-			            });		
-        			}            		
-        			res.send(obj);
-    			});	            
+				            photos.save(function(err,data){
+				                if(err){			                    
+				                    result.push(err);
+				                }
+				                else{
+				                	user.photos.push(data);
+				                	user.save(function(err,data){});
+				                	result.push({msg: "saved"});			                    
+				                }
+				            });		
+	        			}            		
+	        			res.send(obj);
+	    			});	            	
+            	});
             }else{
             	//probably invalid token
             	res.send({success: false, msg: "an error occurred (invalid token??)"});
