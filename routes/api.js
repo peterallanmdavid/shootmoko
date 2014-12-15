@@ -8,6 +8,16 @@ var jwt = require('jwt-simple');
 var moment = require('moment');
 var expires = moment().add('days', 7).valueOf();
 var tokenSecret ='taretasrgadrgaerg';
+var uploadOptions = {
+    tmpDir:  __dirname + '/../public/uploaded/tmp',
+    uploadDir: __dirname + '/../public/uploaded/files',
+    uploadUrl:  '/uploaded/files/',
+    storage : {
+        type : 'local'
+    }
+};
+var uploader = require('blueimp-file-upload-expressjs')(uploadOptions);
+
 
 
 router.get('/register', function(req, res) {
@@ -177,4 +187,56 @@ router.get('/addphotos',function(req, res){
     }
 });
 
+
+
+
+//-- File Upload API --//
+//-- You need a valid token to upload to this --//
+
+router.post('/uploadphotos', function(req,res){	
+	var token = (req.body && req.body.access_token) || (req.query && req.query.access_token) || req.headers['x-access-token'];
+	if(token){		
+		try{
+			var decoded = jwt.decode(token, tokenSecret);
+			console.log(decoded);
+            if (decoded.exp <= Date.now()) {
+                res.end('Access token has expired', 400);
+            }
+            if(decoded.id){
+            	uploader.post(req, res, function (obj) {
+            		var result = [];
+        			for(var i=0; i < obj.files.length;i++){
+	        			var photos = new Photos({
+			                userid : decoded.id,
+			                url: obj.files[i].url,
+			                dateposted: Date.now()
+		            	});
+
+			            photos.save(function(err,data){
+			                if(err){			                    
+			                    result.push(err);
+			                }
+			                else{
+			                	result.push({msg: obj.files[i].url + " saved"});			                    
+			                }
+			            });		
+        			}            		
+        			res.send(obj);
+    			});	            
+            }else{
+            	//probably invalid token
+            	res.send({success: false, msg: "an error occurred (invalid token??)"});
+            }            
+		}catch(e){
+			res.send({success: false, msg: "an error occurred (invalid token 2 ???)"});
+		}
+	}else{
+		//missing token
+		res.send({success: false, msg: "an error occurred"});	
+	}
+	
+	
+});
+
+//console.log(__dirname + '/../public/uploaded/tmp');
 module.exports = router;
