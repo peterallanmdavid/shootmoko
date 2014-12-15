@@ -11,6 +11,7 @@ var routes = (
        <Route name="tmpholder" handler={TmpHolder}/>  
        <Route name="login" handler={LoginForm}/>
        <Route name="register" handler={RegistrationForm}/>
+       <Route name="uploadphotos" handler={UploadForm}/>       
        <DefaultRoute handler={Home} />
     </Route>
 );

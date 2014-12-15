@@ -197,18 +197,17 @@ router.post('/uploadphotos', function(req,res){
 	var token = (req.body && req.body.access_token) || (req.query && req.query.access_token) || req.headers['x-access-token'];
 	if(token){		
 		try{
-			var decoded = jwt.decode(token, tokenSecret);
-			console.log(decoded);
+			var decoded = jwt.decode(token, tokenSecret);			
             if (decoded.exp <= Date.now()) {
                 res.end('Access token has expired', 400);
             }
             if(decoded.id){
             	uploader.post(req, res, function (obj) {
-            		var result = [];
-        			for(var i=0; i < obj.files.length;i++){
+            		var result = [];            		
+        			for(var i=0; i < obj.files.length;i++){        				
 	        			var photos = new Photos({
 			                userid : decoded.id,
-			                url: obj.files[i].url,
+			                url: obj.files[i].url,			                
 			                dateposted: Date.now()
 		            	});
 
@@ -217,7 +216,7 @@ router.post('/uploadphotos', function(req,res){
 			                    result.push(err);
 			                }
 			                else{
-			                	result.push({msg: obj.files[i].url + " saved"});			                    
+			                	result.push({msg: "saved"});			                    
 			                }
 			            });		
         			}            		

@@ -5,19 +5,22 @@
 	<!-- <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css"> -->
 	<link rel="stylesheet" href="http://getbootstrap.com/examples/navbar-fixed-top/navbar-fixed-top.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="/stylesheets/jquery.fileupload.css">
   <link rel="stylesheet" href="/stylesheets/login.css">
-    <link rel="stylesheet" href="/stylesheets/ShootMoko.react.css">    
+  <link rel="stylesheet" href="/stylesheets/ShootMoko.react.css">    
 
 
   <script src="http://fb.me/react-0.12.0.js"></script>
   <script src="http://fb.me/JSXTransformer-0.12.0.js"></script>
   <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>    
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <!-- Misc Plugins -->
+  <script src="/js/jquery.ui.widget.js"></script>    
+  <script src="/js/jquery.fileupload.js"></script>    
+
   <!-- React Plugins -->
   <script src="/react/plugins/react-router.min.js"></script>
   <!-- React Components -->
-  
-
   <script src="/react/components/PhotogsList/PhotogList.react.js" type="text/jsx"></script>
 
   <script src="/react/components/PhotogsList/PhotogsListBestShot.react.js" type="text/jsx"></script>
@@ -35,6 +38,7 @@
   <script src="/react/components/TmpHolder.react.js" type="text/jsx"></script>
   <script src="/react/components/NavBar.react.js" type="text/jsx"></script>
   <script src="/react/components/Home.react.js" type="text/jsx"></script>    
+  <script src="/react/components/UploadForm.react.js" type="text/jsx"></script>    
   <script src="/react/components/ShootmokoApp.react.js" type="text/jsx"></script>
   <script src="/react/components/Routes.react.js" type="text/jsx"></script>
 

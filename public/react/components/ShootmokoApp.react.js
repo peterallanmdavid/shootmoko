@@ -13,7 +13,10 @@ var ShootmokoApp = React.createClass({
 	        type: 'POST',
 	        data: postdata,
 	        success: function(response) {
-	          this.setState({ loginData: { msg: JSON.stringify(response)}});
+	          this.setState({ loginData: { 
+	          					msg: JSON.stringify(response),
+	          					token: response.token
+	          				}});
 	          data.username.getDOMNode().value = '';
 	          data.password.getDOMNode().value = '';	          
 	        }.bind(this),
@@ -25,7 +28,7 @@ var ShootmokoApp = React.createClass({
 	},
 
 	getInitialState: function(){
-		return { loginData: { msg: ""}};
+		return { loginData: { msg: "", token: ""}};
 	},
 	render: function() {
 		return (

@@ -33,6 +33,7 @@
 			          </ul>
 			          <ul className="nav navbar-nav navbar-right">
 			            <li><a href="../navbar/">Default</a></li>
+			            <li><Link to="uploadphotos">UploadPhotoTmp</Link></li>
 			            <li><Link to="login">Login</Link></li>
 			            <li className="active"><a href="./">Fixed top <span className="sr-only">(current)</span></a></li>
 			          </ul>
