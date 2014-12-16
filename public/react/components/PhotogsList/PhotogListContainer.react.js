@@ -40,7 +40,7 @@ var PhotogsListContainer = React.createClass({
 		});
 
 		return(
-			<div className = "photogListContainer">
+			<div className = "mainContainer">
 		        <PhotogListModals />
 				<h1>Photographers List</h1>
 					{storyNodes}

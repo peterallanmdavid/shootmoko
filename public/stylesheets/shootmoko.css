@@ -1,0 +1,28 @@
+.homeContainer{
+margin-bottom: 20px;
+text-align: center;
+border: 1px solid #ddd;
+border-radius: 4px;;
+margin-left: 10%;
+margin-right: 10%;
+min-height: 300px;
+padding-top: 2%;
+}
+
+.mainContainer{
+margin-bottom: 20px;
+margin-left: 10%;
+margin-right: 10%;
+min-height: 300px;
+padding: 2%;
+border: 1px solid #ddd;
+border-radius: 4px;;
+}
+
+
+
+
+
+
+
+/*PhotogListDetailsForm*/

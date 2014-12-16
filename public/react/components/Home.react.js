@@ -15,7 +15,7 @@ var Home = React.createClass({
 		           </Link>
 		        </div> 	 
 				<div className="col-lg-6">		         
-		          <Link to="tmpholder">
+		          <Link to="photogprofile">
 		           <img className="img-circle" src = "/images/portfolio_list/1.PNG" style={divStyle}/>
 		           <h2>I AM A PHOTOGRAPHER</h2>
 		           </Link>

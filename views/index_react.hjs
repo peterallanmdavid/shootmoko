@@ -7,7 +7,9 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="/stylesheets/jquery.fileupload.css">
   <link rel="stylesheet" href="/stylesheets/login.css">
-  <link rel="stylesheet" href="/stylesheets/ShootMoko.react.css">    
+  <link rel="stylesheet" href="/stylesheets/shootmoko.css">    
+  <link rel="stylesheet" href="/stylesheets/photoglist.css">    
+  <link rel="stylesheet" href="/stylesheets/photogprofile.css">    
 
 
   <script src="http://fb.me/react-0.12.0.js"></script>
@@ -22,13 +24,15 @@
   <script src="/react/plugins/react-router.min.js"></script>
   <!-- React Components -->
   <script src="/react/components/PhotogsList/PhotogList.react.js" type="text/jsx"></script>
-
   <script src="/react/components/PhotogsList/PhotogsListBestShot.react.js" type="text/jsx"></script>
   <script src="/react/components/PhotogsList/PhotogListModals.react.js" type="text/jsx"></script>
   <script src="/react/components/PhotogsList/PhotogListDetails.react.js" type="text/jsx"></script>
   <script src="/react/components/PhotogsList/PhotogListContainer.react.js" type="text/jsx"></script>
   <script src="/react/components/PhotogsList/PhotogListSchedule.react.js" type="text/jsx"></script>
   <script src="/react/components/PhotogsList/PhotogListActions.react.js" type="text/jsx"></script>
+
+
+  <script src="/react/components/PhotogProfile/PhotogProfile.react.js" type="text/jsx"></script>
 
   <script src="/react/components/LoginForm.react.js" type="text/jsx"></script>        
   <script src="/react/components/RegistrationForm.react.js" type="text/jsx"></script>
