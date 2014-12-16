@@ -1,4 +1,10 @@
 var PhotogProfile = React.createClass({
+	componentDidMount: function(){
+		loginUrlRedirect = "photogprofile"
+		if(!this.props.loginData.token){
+			window.location = "/react/#/login";
+		}
+	}, 
 	render: function(){
 		return(
 			<div>

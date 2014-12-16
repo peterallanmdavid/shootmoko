@@ -4,14 +4,7 @@ var divStyle = {
 	backgroundColor: 'gray'
 };
 
-var photogProfileURL = "login";
 var Home = React.createClass({ 
-	componentDidMount: function(){
-		var token = this.props.loginData.token;
-		if(token){
-			photogProfileURL = "photogprofile"
-		}
-	}, 
  	render: function(){
  		return(
 			<div className="homeContainer">     
@@ -22,7 +15,7 @@ var Home = React.createClass({
 		           </Link>
 		        </div> 	 
 				<div className="col-lg-6">		         
-		          <Link to={photogProfileURL}>
+		          <Link to="photogprofile">
 		           <img className="img-circle" src = "/images/portfolio_list/1.PNG" style={divStyle}/>
 		           <h2>I AM A PHOTOGRAPHER</h2>
 		           </Link>

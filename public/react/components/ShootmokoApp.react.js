@@ -1,11 +1,10 @@
+var loginUrlRedirect = "";
 var ShootmokoApp = React.createClass({  
 	handleUserLogin: function(data){
 		var postdata = {
 			username: data.username.getDOMNode().value,
 			password: data.password.getDOMNode().value
-		};		
-		
-		
+		};			
 		$.ajax({
 	        //url: this.props.url,
 	        url: '/api/login',
@@ -18,7 +17,10 @@ var ShootmokoApp = React.createClass({
 	          					token: response.token
 	          				}});
 	          data.username.getDOMNode().value = '';
-	          data.password.getDOMNode().value = '';	          
+	          data.password.getDOMNode().value = '';	 
+	          if (loginUrlRedirect!=""){
+	          	window.location = "/react/#/"+loginUrlRedirect;
+	          };       
 	        }.bind(this),
 	        error: function(xhr, status, err) {          
 	          this.setState({ loginData: { msg: "Login Error"}});	          
