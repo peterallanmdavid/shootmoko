@@ -4,6 +4,7 @@ var passport = require('passport');
 var Account = require('../models/account');
 var userPosts = require('../models/userposts');
 var Photos = require('../models/photos');
+var PhotogProfileDetails = require('../models/photogProfileDetails');
 var jwt = require('jwt-simple');
 var moment = require('moment');
 var expires = moment().add('days', 7).valueOf();
@@ -213,6 +214,34 @@ router.post('/uploadphotos', function(req,res){
 	
 	
 });
+
+
+//userid=548fa282a9f41dfc07f6ba94&name=test12355555555555555555&type=test&level=test&shootcount=21&profilepicurl=asdsada&location=cavite&status=offline&portfoliocount=23
+router.post('/updateprofile', function(req, res){
+	var update = {	
+				name: req.body.name,
+				type: req.body.type,
+			    level: req.body.level,
+			    shootCount: req.body.shootcount,
+			    profilePicUrl: req.body.profilepicurl,
+			    location: req.body.location,
+			    status: req.body.status,
+			    portfolioCount: req.body.portfoliocount
+	};
+	PhotogProfileDetails.findOneAndUpdate({userId: req.body.userid}, {$set: update}, {upsert: true, "new": false}).exec(function(err, data) {
+		if(err) res.send({success: false, msg: "an error occurred (user not found??)"});
+		res.send({success:"true",msg: "Profile Updated"});
+	});
+});
+
+
+router.get('/getusedetails', function (req, res){
+	PhotogProfileDetails.find( function(error, data){
+	    console.log(data);
+	    res.json(data);
+	});
+});
+
 
 //console.log(__dirname + '/../public/uploaded/tmp');
 module.exports = router;
