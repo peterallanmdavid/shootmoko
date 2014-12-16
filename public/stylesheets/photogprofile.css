@@ -1,0 +1,19 @@
+.photogProfileMain{
+	border: 1px solid rgba(0,0,0,.15);
+	border-radius: 4px;
+	padding: 2%;
+}
+
+.photogProfileDetails{
+	border: 1px solid rgba(0,0,0,.15);
+	border-radius: 4px;
+}
+
+.photogProfilePortfolio{
+	border: 1px solid rgba(0,0,0,.15);
+	border-radius: 4px;
+}
+.photogProfileComments{
+	border: 1px solid rgba(0,0,0,.15);
+	border-radius: 4px;	
+}
