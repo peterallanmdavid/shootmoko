@@ -1,41 +1,52 @@
 .photogProfileMain{
 	border: 1px solid rgba(0,0,0,.15);
 	border-radius: 4px;
-	padding: 2%;
+	padding: 1%;
+}
+
+.photogProfileDetails{
+	padding: 0;
 }
 
 
 .photogProfilePortfolio{
 	border: 1px solid rgba(0,0,0,.15);
 	border-radius: 4px;
+	margin: 0;
 }
 .photogProfileComments{
 	border: 1px solid rgba(0,0,0,.15);
-	border-radius: 4px;	
+	border-radius: 4px;
 }
 
 .photogProfilePicture{
 	border: 1px solid rgba(0,0,0,.15);
 	padding: 2%;
 }
-.photogProfilePicture > img{
+.photogProfilePicture{
 	width: 100% !important;
-	max-width: 222px;
+	max-width: 150px;
 }
 
 
 .photogProfileSchedule .pre-scrollable{
+	border: 1px solid rgba(0,0,0,.15);
+	border-radius: 4px;
 	overflow-y: hidden;
-	padding-right: 2%;
+	max-height: 316px;
+	width: 100%;
+	margin: 0;
 }
 
-.photogMainDetails{
-	border: 1px solid rgba(0,0,0,.15);
-	border-radius: 4px;
-		padding: 1%
-}
 .photogProfileSchedule{
-	border: 1px solid rgba(0,0,0,.15);
-	border-radius: 4px;
+	padding-right: 1%;
+}
 
+.photogProfileAction{
+	margin-top: 5px;
+	max-width: 150px;
+}
+
+.photogProfileAction .list-group-item{
+font-size: 12px;
 }

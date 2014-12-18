@@ -12,6 +12,7 @@
 .profilePicture{
 	width: 50%;
 	border: 1px solid rgba(0,0,0,.15);
+	padding: 2%;
 
 }
 
@@ -45,6 +46,8 @@
 	border-width: 1px;
 	border-style: solid;
 	height: 100px !important;
+	padding: 1%;
+	width: 80%;
 }
 
 .photogRightPanel{
@@ -68,25 +71,32 @@
 	border: 1px solid rgba(0,0,0,.15);
 	border-radius: 4px;
 	margin-bottom: 10px;
-	padding-right: 5px;
 }
 
 .photogSchedule .pre-scrollable >h4{
 	text-align: center;
+	border-bottom: 1px solid rgba(0,0,0,.15);
 }
 
 .photogSchedule .pre-scrollable:hover{
-	padding-right: 2%;
 	overflow-y: auto;
 }
-
 .photogRightPanel .pre-scrollable{
-	max-height: 125px;
+	max-height: 135px;
 	overflow-y: hidden;
-	padding-right: 2%;
+	margin: 0;
+}
+.itemSchedule{
+	padding-left: 3%;
+	margin: 0;
+	margin-bottom: 2%;
+	border-bottom: 1px solid rgba(0,0,0,.15);
+	padding-bottom: 2%;
 }
 
-
+.itemSchedule .btn-group >button{
+	font-size: 11px;
+}
 /*photogListBestshot Form*/
 .photogsListBestShot{
 	padding:0;
@@ -103,4 +113,8 @@
 /*PhotogListAction*/
 .photogListAction{
 	margin-bottom: 10px;
+}
+
+.photogProfileAction .list-group-item{
+font-size: 13px;
 }
