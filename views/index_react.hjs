@@ -33,7 +33,9 @@
 
 
   <script src="/react/components/PhotogProfile/PhotogProfile.react.js" type="text/jsx"></script>
-
+  <script src="/react/components/PhotogProfile/PhotogProfileDetails.react.js" type="text/jsx"></script>
+  <script src="/react/components/PhotogProfile/PhotogProfilePortfolio.react.js" type="text/jsx"></script>
+  
   <script src="/react/components/LoginForm.react.js" type="text/jsx"></script>        
   <script src="/react/components/RegistrationForm.react.js" type="text/jsx"></script>
   <script src="/react/components/UserItem.react.js" type="text/jsx"></script>

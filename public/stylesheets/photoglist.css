@@ -53,15 +53,7 @@
 	padding-top: 0;
 }
 
-.photogRightPanel .pre-scrollable{
-	max-height: 205px;
-	overflow-y: hidden;
-}
 
-.photogRightPanel .pre-scrollable:hover{
-
-	overflow-y: auto;
-}
 
 .photogListDetails .nav >li>a{
 	padding:0;
@@ -78,9 +70,22 @@
 	margin-bottom: 10px;
 	padding-right: 5px;
 }
-.photogListSchedule .pre-scrollable >h4{
+
+.photogSchedule .pre-scrollable >h4{
 	text-align: center;
 }
+
+.photogSchedule .pre-scrollable:hover{
+	padding-right: 2%;
+	overflow-y: auto;
+}
+
+.photogRightPanel .pre-scrollable{
+	max-height: 125px;
+	overflow-y: hidden;
+	padding-right: 2%;
+}
+
 
 /*photogListBestshot Form*/
 .photogsListBestShot{

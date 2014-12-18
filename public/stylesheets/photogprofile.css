@@ -4,10 +4,6 @@
 	padding: 2%;
 }
 
-.photogProfileDetails{
-	border: 1px solid rgba(0,0,0,.15);
-	border-radius: 4px;
-}
 
 .photogProfilePortfolio{
 	border: 1px solid rgba(0,0,0,.15);
@@ -16,4 +12,30 @@
 .photogProfileComments{
 	border: 1px solid rgba(0,0,0,.15);
 	border-radius: 4px;	
+}
+
+.photogProfilePicture{
+	border: 1px solid rgba(0,0,0,.15);
+	padding: 2%;
+}
+.photogProfilePicture > img{
+	width: 100% !important;
+	max-width: 222px;
+}
+
+
+.photogProfileSchedule .pre-scrollable{
+	overflow-y: hidden;
+	padding-right: 2%;
+}
+
+.photogMainDetails{
+	border: 1px solid rgba(0,0,0,.15);
+	border-radius: 4px;
+		padding: 1%
+}
+.photogProfileSchedule{
+	border: 1px solid rgba(0,0,0,.15);
+	border-radius: 4px;
+
 }

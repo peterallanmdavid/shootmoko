@@ -3,7 +3,7 @@ var PhotogsListBestShot = React.createClass({
 		var  pListBestShot = this.props.pBestShots.map(function (pList){
 			return(
 				
-				        <div className="col-xs-3 col-md-3 col-lg-3" key ={pList.photoId}>
+				        <div className="col-xs-4 col-md-4 col-lg-4" key ={pList.photoId}>
 							<a href="#" className = "pList" data-target=".bestShotModal" role="button"  data-toggle="modal" data-whatever={pList.photoUrl}>
 							  <img src={pList.photoUrl} alt="..."/>
 							</a>						
