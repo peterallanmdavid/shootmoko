@@ -17,6 +17,7 @@
   <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>    
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
   <!-- Misc Plugins -->
+
   <script src="/js/jquery.ui.widget.js"></script>    
   <script src="/js/jquery.fileupload.js"></script>    
 
